@@ -1,0 +1,43 @@
+.footer-pager {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 142px;
+  line-height: 100%;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 100%;
+    border-top: 2px solid $straw;
+    display: block;
+    top: -26px;
+    position: absolute;
+  }
+
+  .downArrow {
+    margin-top: -38px;
+    opacity: 1;
+    transform: scale(0.7);
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      border-top: 2px solid $straw;
+      width: 40%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
