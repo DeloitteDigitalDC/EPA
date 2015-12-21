@@ -1,2 +1,28 @@
-<h1>Individual</h1>
-<div>This is the individual view.</div>
+<div class="slide-body individual container-fluid">
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
+    </div>
+    <div class="col-xs-6 text-right">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="hero-type">
+        To start, this is just a sample of<br />one energy resource used in {{ IndividualCtrl.selectedState }}.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <energy-legend></energy-legend>
+    </div>
+    <div class="col-md-7">
+      <div dee-three="IndividualCtrl.circleData" dee-three-outer-circle-offset="5" style="height: 640px; width: 100%;"></div>
+    </div>
+    <div class="col-md-3">
+        <btu-badge btu="200000000"></btu-badge>
+    </div>
+  </div>
+</div>
+

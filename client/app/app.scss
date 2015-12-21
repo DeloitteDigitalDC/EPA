@@ -58,6 +58,15 @@ h5 {
   font-size: 1em;
 }
 
+.hero-type {
+  font-weight: 200;
+  font-size: 48px;
+  color: $lavender;
+  border-left: 3px solid $lavender;
+  padding-left: 25px;
+  line-height: 100%;
+}
+
 .btn-unstyled {
   display: block;
   margin: 0 auto;
@@ -74,7 +83,10 @@ h5 {
 @import 'views/state/state.scss';
 @import 'views/statevstate/statevstate.scss';
 @import 'views/title/title.scss';
+@import '../components/btuBadge/btuBadge.scss';
+@import '../components/d3/d3.scss';
 @import '../components/downArrow/downArrow.scss';
 @import '../components/gradients/gradients.scss';
+@import '../components/legend/legend.scss';
 @import '../components/state-drop-down/state-drop-down.scss';
 // endinjector

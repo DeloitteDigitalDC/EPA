@@ -56,5 +56,19 @@
     };
   });
 
+  /**
+   * Directive to add click event to move to the next slide
+   */
+  angular.module('epaRfiApp').directive('moveSlideDownClick', function () {
+    return {
+      restrict: 'A',
+      link    : function (scope, element) {
+        $(element).on('click', function() {
+          $.fn.fullpage.moveSectionDown();
+        });
+      }
+    };
+  });
+
 })();
 
