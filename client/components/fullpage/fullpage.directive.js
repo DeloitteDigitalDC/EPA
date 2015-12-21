@@ -6,20 +6,42 @@
    * Angular directive wrapper for fullpage.js
    * @link https://github.com/alvarotrigo/fullPage.js
    */
-  angular.module('epaRfiApp').directive('fullpage', function ($timeout) {
+  angular.module('epaRfiApp').directive('fullpage', function ($timeout, $rootScope) {
     return {
       restrict: 'A',
+      scope   : {
+        fullpageInterface: "="
+      },
       link    : function (scope, element) {
+        init();
+
+        function init() {
+          $timeout(function () {
+            buildFullPage();
+          }, 0);
+        }
+
         //Wait for a digest cycle to complete so other helper directives complete
-        $timeout(function () {
+        function buildFullPage() {
           $(element).fullpage(
             {
               normalScrollElements: '.' + normalScrollClass
             }
           );
-        }, 0)
+        }
+
+        function destroyFullPage() {
+          $.fn.fullpage.destroy();
+        }
+
+        scope.fullpageInterface = {
+          rebuildFullpage: function () {
+            destroyFullPage();
+            init();
+          }
+        };
       }
-    };
+    }
   });
 
   /**

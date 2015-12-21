@@ -5,9 +5,16 @@ angular.module('epaRfiApp')
   var vm = this;
 
   vm.selectedState = stateManager.getSelectedState();
+  vm.disableDownButton = true;
 
   resourceService.getResourceList().then(function(result) {
-    vm.stateArray = _.reject(result.data.States, {'name': 'United States'});
+    vm.stateArray = [{ name: 'va' }, { name: 'md'}]; //_.reject(result.data.States, {'name': 'United States'});
   });
+
+  vm.stateChangedEvent = function(newState) {
+    if(newState) {
+      vm.disableDownButton = false;
+    }
+  }
 
 }]);

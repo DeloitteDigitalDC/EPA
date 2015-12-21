@@ -5,8 +5,12 @@
   &:hover {
     opacity: 1;
   }
+}
 
-  &.disabled {
+.disabled,
+.disabled:hover {
+  .downArrow {
+    cursor: not-allowed;
     opacity: 0.5;
   }
 }
