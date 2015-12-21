@@ -1,11 +1,12 @@
-.energy-legend {
+energy-legend {
+  width: 175px;
+  display: block;
+  margin: 0 auto;
 
   ul {
     width: 175px;
     position: relative;
-    float: right;
-    margin-right: 50px;
-    margin-top: 150px;
+    left: 75px;
 
     &:after {
       content: '';

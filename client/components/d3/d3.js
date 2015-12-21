@@ -10,7 +10,8 @@
         deeThreeFillColor        : "=",
         deeThreeLabelColor       : "=",
         deeThreeElementPadding   : "=",
-        deeThreeOuterCircleOffset: "="
+        deeThreeOuterCircleOffset: "=",
+        deeThreeEnergyClickCallback: "="
       },
       link    : function (scope, element) {
         scope.ENERGY_TYPES = appConfig.ENERGY_TYPES;
@@ -52,7 +53,10 @@
     var circle = svg.selectAll("g")
     .data(scope.deeThree)
     .enter()
-    .append("g");
+    .append("g")
+    .on("click", function(d) {
+      scope.deeThreeEnergyClickCallback(d);
+    });
 
     svg.selectAll("g").append("circle")
     .attr("r", function (d) {

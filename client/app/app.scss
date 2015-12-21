@@ -13,10 +13,10 @@ $lilac: rgb(165, 143, 159);
 $rust: rgb(229, 173, 147);
 $lightBlue: #3f6b94;
 $straw: #fef7ca; //rgb (253, 247, 202);
-$straw-85: rgba($straw, 85);
-$straw-50: rgba($straw, 50);
-$straw-25: rgba($straw, 25);
-$straw-5: rgba($straw, 5);
+$straw-85: rgba($straw, 0.85);
+$straw-50: rgba($straw, 0.50);
+$straw-25: rgba($straw, 0.25);
+$straw-5: rgba($straw, 0.05);
 
 /**
  * App-wide Styles
@@ -61,8 +61,8 @@ h5 {
 .hero-type {
   font-weight: 200;
   font-size: 48px;
-  color: $lavender;
-  border-left: 3px solid $lavender;
+  color: $straw;
+  border-left: 3px solid $straw;
   padding-left: 25px;
   line-height: 100%;
 }
@@ -72,6 +72,16 @@ h5 {
   margin: 0 auto;
   border: 0;
   outline: 0;
+}
+
+//To make BS cols the same height
+.row {
+  display: flex;
+}
+
+.vertical-center {
+  display:         flex;
+  align-items: center;
 }
 
 // Component styles are injected through grunt
@@ -85,7 +95,9 @@ h5 {
 @import 'views/title/title.scss';
 @import '../components/btuBadge/btuBadge.scss';
 @import '../components/d3/d3.scss';
+@import '../components/detailBox/detailBox.scss';
 @import '../components/downArrow/downArrow.scss';
+@import '../components/footerPager/footerPager.scss';
 @import '../components/gradients/gradients.scss';
 @import '../components/legend/legend.scss';
 @import '../components/state-drop-down/state-drop-down.scss';

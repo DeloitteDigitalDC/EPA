@@ -33,3 +33,18 @@
     margin-top: 10px;
   }
 }
+
+.invert {
+  .btuBadge {
+    background-image: url(../../assets/images/btu_badge_straw.svg)
+  }
+
+  .btuAmount,
+  .btuMagnitude {
+    color: $lavender;
+  }
+
+  .btuLocation {
+    color: $straw;
+  }
+}
