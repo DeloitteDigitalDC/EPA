@@ -1,0 +1,14 @@
+#mainSection {
+  .slide-body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+info-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 100;
+}
