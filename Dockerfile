@@ -10,5 +10,5 @@ COPY dist .
 EXPOSE 8080
 
 ENV NODE_ENV production
-ENV APIKEY $APIKEY
-CMD ["node", "server/app.js"]
+
+CMD ["APIKEY=$APIKEY", "node", "server/app.js"]

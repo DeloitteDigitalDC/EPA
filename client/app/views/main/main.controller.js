@@ -3,7 +3,7 @@
 angular.module('epaRfiApp')
 .controller('MainCtrl', function ($scope, stateManager) {
   var vm = this;
-  vm.hideViews = true;
+  vm.hideViews = false;// true;
 
   $scope.$watch(function () {
     return stateManager.getSelectedState();

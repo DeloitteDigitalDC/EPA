@@ -1,0 +1,42 @@
+energy-legend {
+  width: 175px;
+  display: block;
+  margin: 0 auto;
+
+  ul {
+    width: 175px;
+    position: relative;
+    left: 75px;
+
+    &:after {
+      content: '';
+      height: 90%;
+      border-left: 1px solid rgba($straw, 0.5);
+      display: block;
+      position: absolute;
+      top: 5%;
+      left: -10px;
+    }
+  }
+  li {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    overflow: visible;
+
+    &:before {
+      content: attr(data-abbr);
+      background: url(../../assets/images/diamond.svg) center center no-repeat;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: -50px;
+      top: 8px;
+      text-align: center;
+      line-height: 36px;
+    }
+  }
+}
