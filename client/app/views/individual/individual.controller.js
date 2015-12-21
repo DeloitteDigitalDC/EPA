@@ -13,7 +13,6 @@ angular.module('epaRfiApp')
     });
 
     vm.energyTypeClick = function(d) {
-
       vm.showLegend = false;
       vm.selectedEnergyData = d;
       console.log(vm.showLegend);

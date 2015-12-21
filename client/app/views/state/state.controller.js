@@ -1,12 +1,15 @@
 'use strict';
 
 angular.module('epaRfiApp')
-.controller('StateCtrl', function (appConfig) {
+.controller('StateCtrl', function (appConfig, resourceService, stateManager) {
 
 	var vm = this;
 
 	vm.selectedTime = {};
 	vm.yearArray = appConfig.YEAR_TIMELINE;
-	console.log('year array', vm.yearArray);
+	
+	resourceService.getAllResourcesForState('Alabama').then(function(result) {
+		console.log('result', result);
+	});
 
 });

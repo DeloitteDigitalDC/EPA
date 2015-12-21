@@ -10,7 +10,8 @@ angular.module('epaRfiApp')
 
     var resourceService = {
       getResourceList: getResourceList,
-      getResource: getResource
+      getResource: getResource,
+      getAllResourcesForState: getAllResourcesForState
     };
 
     /**
@@ -45,6 +46,23 @@ angular.module('epaRfiApp')
         'format': format
       };
       return $http.get("/api/resources/" + resourceName, {'params': queryParams}).catch(function(error) {
+        console.log('error', error);
+      });
+    }
+
+    /**
+     * @param  {String} - State (i.e. Alabama, California, Rhode Island)
+     * @param  {Number} - Year, Optional
+     * @param  {Format} - Format Type ('capita'), Optional
+     * @return {Object} - Object representing the data requested from the API
+     */
+    function getAllResourcesForState(state, year, format) {
+      var queryParams = {
+        'state': state,
+        'year': year,
+        'format': format
+      };
+      return $http.get("/api/resources/all", {'params': queryParams}).catch(function(error) {
         console.log('error', error);
       });
     }
