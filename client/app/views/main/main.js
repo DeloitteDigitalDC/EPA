@@ -26,6 +26,11 @@ angular.module('epaRfiApp')
             controller: 'StateCtrl',
             templateUrl: 'app/views/state/state.html'
           },
+          'timeline@main': {
+            controllerAs: 'TimelineCtrl',
+            controller: 'TimelineCtrl',
+            templateUrl: 'app/views/timeline/timeline.html'
+          },
           'statevstate@main': {
             controllerAs: 'StatevstateCtrl',
             controller: 'StatevstateCtrl',

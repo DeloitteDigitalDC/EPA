@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
       <div class="hero-type">
-        How much energy does each state population use?
+        Take a look at our energy usage in past years.
       </div>
     </div>
   </div>
@@ -20,6 +20,7 @@
     </div>
     <div class="col-xs-7">
       <div dee-three="IndividualCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="IndividualCtrl.energyTypeClick" style="height: 480px;"></div>
+      <div timeline year-array="StateCtrl.yearArray" selected-time="StateCtrl.selectedTime"></div>
     </div>
     <div class="col-xs-3 vertical-center">
       <btu-badge class="invert" btu="200000000"></btu-badge>
@@ -28,7 +29,7 @@
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
       <footer-pager>
-        What’s our usage look like in the past?
+        What about the whole nation’s usage?
       </footer-pager>
     </div>
   </div>
