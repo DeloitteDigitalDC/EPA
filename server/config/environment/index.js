@@ -43,7 +43,7 @@ var all = {
 
   // EIA API Information
   eia: {
-    'apiKey': process.env.APIKEY,
+    'apiKey': process.env.APIKEY || '34C8B4F3D636F480298A408B8327C1F5',
     'categoryEndpoint': 'http://api.eia.gov/category/?api_key=',
     'seriesEndpoint': 'http://api.eia.gov/series/?api_key='
   },
