@@ -1,0 +1,9 @@
+<div class="timeline">
+	<div class="diamond" data-ng-repeat="year in yearArray" data-ng-click="selectTime(year)" data-ng-class="{'active': year === selectedTime.year}">
+	  <a><span>{{year}}</span></a>
+	  <div class="circle"></div>
+	  <div class="big-circle"></div>
+	  <div class="line" data-ng-if="$index > 0"></div>
+	</div>
+
+</div>

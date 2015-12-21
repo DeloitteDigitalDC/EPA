@@ -1,6 +1,7 @@
 'use strict';
 
 var configExport = {
+  YEAR_TIMELINE: [1960, 1970, 1980, 1990, 2000, 2010],
   ENERGY_TYPES : {
     COAL : {
       name: 'Coal',

@@ -1,0 +1,66 @@
+.timeline {
+
+  .diamond {
+    margin-top:10px;
+    width:40px;
+    height:40px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    background: $straw;
+    opacity: 0.5;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    & span, .circle, .big-circle, .line {
+      transform:rotate(-45deg);
+      -ms-transform:rotate(-45deg);
+      -webkit-transform:rotate(-45deg);
+    }
+
+    .circle::before {
+      display: inline-block;
+      margin-top: 22px;
+      margin-left: 37px;
+      content: "\25CF";
+    }
+
+    .big-circle::before {
+      display: inline-block;
+      margin-top: 1px;
+      padding-left: 55px;
+      content: "\2B24";
+    }
+
+    .line {
+      background: $straw;
+      height: 4px;
+      width: 74px;
+      margin-top: -8px;
+      margin-left: -16px;
+    }
+
+    &.active .line {
+      background: $lavender;
+    }
+
+    & a {
+      color: $lavender;
+    }
+
+    & span {
+      display: inline-block;
+      margin-top: 9px;
+      margin-left: 6px;
+      font-weight: 700;
+    }
+  }
+
+}
