@@ -4,6 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .fadeTransition {
+    transition: opacity 1500ms ease-out;
+    opacity: 1;
+  }
+
+  .fadeIn {
+    opacity: 0 !important;
+  }
 }
 
 info-button {

@@ -1,0 +1,22 @@
+.downArrow {
+  opacity: 0.70;
+  @extend .down_btn;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.disabled,
+.disabled:hover {
+  .downArrow {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.downArrow-straw {
+  .downArrow {
+
+  }
+}

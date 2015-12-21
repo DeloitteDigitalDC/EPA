@@ -1,0 +1,10 @@
+<div class="stateDropDown" normal-scroll>
+	<ui-select ng-model="selectedState.selected">
+	    <ui-select-match placeholder="Select a US State">
+	        <span ng-bind="$select.selected.name"></span>
+	    </ui-select-match>
+	    <ui-select-choices repeat="state in (stateArray | filter: $select.search)">
+	        <span class="state-text" ng-bind="state.name"></span>
+	    </ui-select-choices>
+	</ui-select>
+</div>
