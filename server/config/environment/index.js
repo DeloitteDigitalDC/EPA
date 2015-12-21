@@ -49,27 +49,21 @@ var all = {
   },
   resources: {
     'coal': {
-      'definition': 'testing def',
       'id': 40927
     },
     'nuclear': {
-      'definition': 'testing def',
       'id': 40933
     },
     'solar': {
-      'definition': 'testing def',
       'id': 40956
     },
     'wind': {
-      'definition': 'testing def',
       'id': 40932
     },
     'naturalgas': {
-      'definition': 'testing def',
       'id': 40951
     },
     'gasoline': {
-      'definition': 'testing def',
       'id': 40946
     }
   }
