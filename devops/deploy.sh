@@ -1,10 +1,14 @@
 #!/bin/bash
 
+echo "Setting AWS Region"
 aws configure set region $AWS_REGION
 
 deploy_image() {
+  echo "Logging into Docker Hub"
 	docker login --email="$DOCKER_EMAIL" --username="$DOCKER_USERNAME" --password="$DOCKER_PASS"
+	echo "Building Docker Image"
 	docker build -t deloittedigitaldc/epa:latest .
+	echo "Pushing image to Hub"
 	docker push deloittedigitaldc/epa:latest
 }
 
@@ -15,6 +19,7 @@ runningCount() {
 
 restart_cluster() {
 	#Set the desired count to 0 to stop exising tasks
+	echo "Stopping cluster"
 	aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --desired-count 0 > /dev/null
 
 	for attempt in {1..180}; do
