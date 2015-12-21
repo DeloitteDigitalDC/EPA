@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('epaRfiApp')
-.controller('StateCtrl', function ($scope) {
+.controller('StateCtrl', function (appConfig) {
+
+	var vm = this;
+
+	vm.selectedTime = {};
+	vm.yearArray = appConfig.yearTimeline;
 
 });
