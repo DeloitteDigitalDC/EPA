@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('epaRfiApp')
-  .controller('MainCtrl', ['$scope', 'appConfig', 'stateManager', function () {
-    var vm = this;
+.controller('MainCtrl', function ($scope) {
 
+});
 
-  }]);

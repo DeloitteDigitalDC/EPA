@@ -1,9 +1,6 @@
 'use strict';
 
 angular.module('epaRfiApp')
-  .controller('StateCtrl', ['$scope', 'stateManager', function ($scope, stateManager) {
-    var vm = this;
+.controller('StateCtrl', function ($scope) {
 
-    vm.state = stateManager.getSelectedState();
-  }]);
-  
+});
