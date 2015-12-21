@@ -1,0 +1,23 @@
+machine:
+  ruby:
+    version: 1.9.3-p551
+  node:
+    version: 4.2.2
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - npm install grunt grunt-cli bower -g
+    - gem install sass
+  override:
+    - bower install
+    - npm install --development
+    - grunt build
+    - docker info
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - ./devops/deploy.sh
