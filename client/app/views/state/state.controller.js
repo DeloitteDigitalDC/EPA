@@ -11,7 +11,9 @@ angular.module('epaRfiApp')
 		'year': 1960 // default
 	};
 	vm.resourceData = {}; // where the data for d3 lies
+	var resourceData = null; // cache the result when a state is selected
 
+	// when the state is selected, init()
   $scope.$watch(function() {
     return stateManager.getSelectedState();
   }, function(newVal, oldVal) {
@@ -21,27 +23,44 @@ angular.module('epaRfiApp')
 		}
   });
 
-  // get the correct data for the year selected
+  // when the year changes, filter through the cached result from the init()
 	$scope.$watch(function() {
 		return vm.selectedTime;
 	}, function(newVal, oldVal) {
 		if(newVal !== oldVal) {
 			console.log('newVal', newVal);
-			init();
+			filterData(resourceData);
 		}
 	}, true);
 
+	/**
+	 * @return {Object} - Data to initilize visuals for d3, year 1960
+	 */
 	function init() {
 		var state = stateManager.getSelectedState();
 		resourceService.getAllResourcesForState(state).then(function(response) {
-			_.forEach(energyTypes, function(item) {
-				vm.resourceData[item.key] = getBtuForYear(_.find(response.data, {'resource': item.key}).result);
-			});
-
-			console.log('deethree results', vm.resourceData);
+			resourceData = response;
+			filterData(response);
 		});
 	}
 
+	/**
+	 * This function filters through the response object to feed into d3
+	 * @param  {Object} - response from the service
+	 * @return {Object} - vm.resourceData for d3
+	 */
+	function filterData(response) {
+		_.forEach(energyTypes, function(item) {
+			vm.resourceData[item.key] = getBtuForYear(_.find(response.data, {'resource': item.key}).result);
+		});
+		console.log('StateCtrl results', vm.resourceData);
+	}
+	
+	/**
+	 * This is a helper function to filter through the response data and find the data for the selected year
+	 * @param  {Object} - result from the API call
+	 * @return {Array} - Array representing the item with the matched year
+	 */
 	function getBtuForYear(result) {
 		var data = result[0].data;
 		var yearResp = _.find(data, function(yearInfo) {
@@ -49,6 +68,7 @@ angular.module('epaRfiApp')
   	});
   	return yearResp;
 	}
+
 
 	vm.showLegend = true;
 

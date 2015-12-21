@@ -1,16 +1,27 @@
 'use strict';
 
 angular.module('epaRfiApp')
-  .controller('IndividualCtrl', function ($scope, appConfig, stateManager) {
+  .controller('IndividualCtrl', function ($scope, appConfig, resourceService, stateManager) {
   	var vm = this;
 
     vm.showLegend = true;
+    vm.resourceData = null; // data for d3, it is set in the init()
 
     $scope.$watch(function() {
       return stateManager.getSelectedState();
-    }, function(newVal) {
-      vm.selectedState = newVal;
+    }, function(newVal, oldVal) {
+      if(newVal !== oldVal) {
+        init();
+      }
     });
+
+    function init() {
+      var state = stateManager.getSelectedState();
+      resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
+        vm.resourceData = response.data;
+        console.log('IndividualCtrl resourceData', vm.resourceData);
+      });
+    }
 
     vm.energyTypeClick = function(d) {
       vm.showLegend = false;

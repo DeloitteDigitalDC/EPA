@@ -70,9 +70,9 @@ eiaResourceApi.getResourceByYearCapita = function getResourceByYearCapita(resour
     var population = convertThousandsPeopletoPeople(populationResult.data[1]);
     var perCapita = parseInt(resourceBtu / population, 10); // round the result
     return {
-      'Resource': resource_name,
-      'UsagePerCapita': perCapita,
-      'Units': 'BTU per Capita'
+      'resource': resource_name,
+      'usagePerCapita': perCapita,
+      'units': 'BTU per Capita'
     };
   });
 };
