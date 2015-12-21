@@ -1,0 +1,32 @@
+
+$dark-blue: #312048;
+$lighter-blue: #305280;
+
+$cream: #e4ad92;
+$straw: #fdf7ca;
+
+$pink: #7c5e75;
+$purple: #e29baa;
+
+$ozone: #759cac;
+$atmos: #dec8ba;
+
+.dark-blue-gradient {
+  background: $dark-blue;
+  background: linear-gradient(to bottom, $dark-blue 0%, $lighter-blue 100%);
+}
+
+.sunny-day-gradient {
+  background: $cream;
+  background: linear-gradient(to bottom, $cream 0%, $straw 100%);
+}
+
+.pink-purple-gradient {
+  background: $pink;
+  background: linear-gradient(to bottom, $pink 0%, $purple 100%);
+}
+
+.clear-sky-gradient {
+  background: $ozone;
+  background: linear-gradient(to bottom, $ozone 0%, $atmos 100%);
+}

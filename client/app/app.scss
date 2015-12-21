@@ -2,21 +2,77 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500,800,700);
+
+
+/**
+  Colors
+*/
+$lavender: rgb(124, 94, 117);
+$lilac: rgb(165, 143, 159);
+$rust: rgb(229, 173, 147);
+$lightBlue: #3f6b94;
+$straw: #fef7ca; //rgb (253, 247, 202);
+$straw-85: rgba($straw, 85);
+$straw-50: rgba($straw, 50);
+$straw-25: rgba($straw, 25);
+$straw-5: rgba($straw, 5);
 
 /**
  * App-wide Styles
  */
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+body {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  color: $straw;
+}
+
+p {
+  font-size: 1.33em;
+  font-weight: 200;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 2.0em;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 2.175em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.btn-unstyled {
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
 }
 
 // Component styles are injected through grunt
 // injector
-@import 'account/login/login.scss';
-@import 'admin/admin.scss';
-@import 'main/main.scss';
+@import 'sprite.scss';
+@import 'views/individual/individual.scss';
+@import 'views/main/main.scss';
+@import 'views/nation/nation.scss';
+@import 'views/state/state.scss';
+@import 'views/statevstate/statevstate.scss';
+@import 'views/title/title.scss';
+@import '../components/gradients/gradients.scss';
 // endinjector

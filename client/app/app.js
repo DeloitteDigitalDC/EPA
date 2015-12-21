@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('epaApp', [
-  'epaApp.constants',
+angular.module('epaRfiApp', [
+  'epaRfiApp.constants',
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.select'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
@@ -14,3 +15,4 @@ angular.module('epaApp', [
 
     $locationProvider.html5Mode(true);
   });
+

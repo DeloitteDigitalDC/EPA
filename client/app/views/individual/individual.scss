@@ -1,0 +1,10 @@
+.individual {
+  background-image: url(../assets/images/individual_bg.svg);
+
+  .logo,
+  h3 {
+    margin: 40px;
+    color: $lavender;
+    letter-spacing: 5px;
+  }
+}
