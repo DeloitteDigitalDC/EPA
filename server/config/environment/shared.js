@@ -38,7 +38,7 @@ var configExport = {
     url: 'http://epa-rfi-ecselastic-tu9y9j5je7k4-1565253159.us-east-1.elb.amazonaws.com/',
     title: 'The Power of You',
     description: 'The power of you description',
-    image: 'http://i.imgur.com/WACv9Cl.jpg',
+    image: 'http://www.deloittedigital.com/assets/img/common/footer-map-us-desktop-2x.jpg',
     TWITTER: {
       'account': 'DeloitteDIGI_US',
       'tweet': 'Check out this cool site'
