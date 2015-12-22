@@ -19,18 +19,16 @@
       <detail-box ng-show="!IndividualCtrl.showLegend" energy-data="IndividualCtrl.selectedEnergyData"></detail-box>
     </div>
     <div class="col-xs-7">
-      <div dee-three="IndividualCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="IndividualCtrl.energyTypeClick" style="height: 480px;"></div>
+      <div dee-three="IndividualCtrl.resourceData" dee-three-interface="IndividualCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="IndividualCtrl.energyTypeClick"></div>
     </div>
     <div class="col-xs-3 vertical-center">
-        <btu-badge class="invert" btu="200000000"></btu-badge>
+        <btu-badge class="invert" btu="IndividualCtrl.btuTotal"></btu-badge>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <footer-pager>
-        Let’s see what 5 resources adds up to.
-      </footer-pager>
-    </div>
-  </div>
+
+  <footer-pager>
+    Let’s see what 5 resources add up to.
+  </footer-pager>
+
 </div>
 

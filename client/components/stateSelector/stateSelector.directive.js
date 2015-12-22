@@ -2,7 +2,7 @@
 (function () {
   angular.module('epaRfiApp').directive('stateSelector', function (appConfig, stateManager) {
     return {
-      restrict: 'E',
+      restrict: 'EA',
       scope: {
         selectedState: "="
       },
