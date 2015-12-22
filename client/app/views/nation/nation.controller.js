@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('epaRfiApp')
-  .controller('NationCtrl', function (appConfig, resourceService) {
+  .controller('NationCtrl', function ($scope, appConfig, resourceService) {
     
     var vm = this;
     vm.resourceData = []; // data for d3
