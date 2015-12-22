@@ -112,25 +112,37 @@
 
     function getRadiusFromUsage(d) {
       var btu = d.usage;
-      if(btu < 100) {
+      if(btu < 100) {   //Hundred
         return 20;
       } else
-      if(btu < 999) {
+      if(btu < 1000) {   //Thousand
+        return 25;
+      } else
+      if(btu < 10000) {  //Ten Thousand
         return 30;
       } else
-      if(btu < 9999) {
+      if(btu < 100000) {  //Hundred Thousand
+        return 35;
+      } else
+      if(btu < 500000) {  //Five Hundred Thousand
         return 40;
       } else
-      if(btu < 99999) {
+      if(btu < 1000000) { //One Million
+        return 45;
+      } else
+      if(btu < 10000000) { //Ten Million
         return 50;
       } else
-      if(btu < 999999) {
+      if(btu < 100000000) { //Hundred Million
+        return 55;
+      } else
+      if(btu < 250000000) { // 250 Million
         return 60;
       } else
-      if(btu < 999999999) {
+      if(btu < 500000000) { // Less Than 500 Million
         return 70;
-      } else
-      if(btu > 999999999) {
+      }
+      if(btu > 500000000) { // Greater Than 500 Million
         return 80;
       }
       else {
