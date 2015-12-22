@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="96.41" height="96.41" viewBox="0 0 96.41 96.41">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #FEF7CA;
+      }
+
+      .cls-1, .cls-2 {
+        opacity: 0.83;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #FEF7CA;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>downArrow_lilac</title>
+  <g id="_Group_" data-name="&lt;Group&gt;">
+    <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" class="cls-1" d="M48.21,11.51L11.52,48.2,48.21,84.9,84.9,48.2Zm-16,33.11,2.51-2.55L48.21,55.56,61.7,42.07l2.51,2.55-16,16Z"/>
+    <g id="_Group_2" data-name="&lt;Group&gt;" class="cls-2">
+      <polyline id="_Path_" data-name="&lt;Path&gt;" class="cls-3" points="18.12 65.62 0.71 48.21 48.21 0.71 95.71 48.21 48.21 95.71 28.49 75.94"/>
+      <circle id="_Path_2" data-name="&lt;Path&gt;" class="cls-4" cx="17.74" cy="65.31" r="2.35"/>
+    </g>
+  </g>
+</svg>

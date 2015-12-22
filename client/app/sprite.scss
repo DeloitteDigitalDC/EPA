@@ -1,293 +1,293 @@
-.diamond-icon {
-  background-image: url(../assets/images/diamonds.svg);
-  width: 31px; height: 33px;
-}
-
-.diamond-inset {
-  position: relative;
-  &:after {
-    content: '';
-    background-image: url(../assets/images/diamonds.svg);
-    width: 31px; height: 33px;
-    display: block;
-  }
-  &.wind:after { background-position: 0px -32px; }
-  &.coal:after { background-position: 31px -32px; }
-  &.natural-gas:after { background-position: -93px -32px; }
-  &.nuclear:after { background-position: -62px -32px; }
-  &.solar:after { background-position: -31px -32px; }
-
-}
-
-.W-Light { background-position: 0px 0px; }
-.C-Light { background-position: 31px 0px; }
-.G-Light { background-position: -93px 0px; }
-.N-Light { background-position: -62px 0px; }
-.S-Light { background-position: -31px 0px; }
-
-.Coal_Beige {
-  background: url("../assets/images/sprite.svg") 44.44743210540468% 81.92090395480228% no-repeat;
-}
-
-.Coal_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Coal_Purple {
-  background: url("../assets/images/sprite.svg") 14.81581070180156% 81.92090395480228% no-repeat;
-}
-
-.Coal_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Facebook {
-  background: url("../assets/images/sprite.svg") 14.385212965443342% 99.76996385146238% no-repeat;
-}
-
-.Facebook-dims {
-  width: 53.7px;
-  height: 53.7px;
-}
-
-.Gas_Beige {
-  background: url("../assets/images/sprite.svg") 59.26324280720624% 81.92090395480228% no-repeat;
-}
-
-.Gas_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Gas_Purple {
-  background: url("../assets/images/sprite.svg") 0 81.92090395480228% no-repeat;
-}
-
-.Gas_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.HandPointer_Active {
-  background: url("../assets/images/sprite.svg") 28.71657754010695% 94.87500000000001% no-repeat;
-}
-
-.HandPointer_Active-dims {
-  width: 53px;
-  height: 38px;
-}
-
-.Linkedin {
-  background: url("../assets/images/sprite.svg") 0 99.76996385146238% no-repeat;
-}
-
-.Linkedin-dims {
-  width: 53.7px;
-  height: 53.7px;
-}
-
-.NaturalGas_Beige {
-  background: url("../assets/images/sprite.svg") 86.0446356547459% 0 no-repeat;
-}
-
-.NaturalGas_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.NaturalGas_Purple {
-  background: url("../assets/images/sprite.svg") 86.0446356547459% 18.97640412097042% no-repeat;
-}
-
-.NaturalGas_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Nuclear_Beige {
-  background: url("../assets/images/sprite.svg") 86.0446356547459% 37.95280824194084% no-repeat;
-}
-
-.Nuclear_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Nuclear_Purple {
-  background: url("../assets/images/sprite.svg") 37.59075020166712% 58.69059488202062% no-repeat;
-}
-
-.Nuclear_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Solar_Beige {
-  background: url("../assets/images/sprite.svg") 52.40656090346868% 58.69059488202062% no-repeat;
-}
-
-.Solar_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Solar_Purple {
-  background: url("../assets/images/sprite.svg") 67.22237160527024% 58.69059488202062% no-repeat;
-}
-
-.Solar_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Twitter {
-  background: url("../assets/images/sprite.svg") 85.72193945888026% 75.05750903713441% no-repeat;
-}
-
-.Twitter-dims {
-  width: 53.7px;
-  height: 53.7px;
-}
-
-.Wind_Beige {
-  background: url("../assets/images/sprite.svg") 86.0446356547459% 56.92921236291127% no-repeat;
-}
-
-.Wind_Beige-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.Wind_Purple {
-  background: url("../assets/images/sprite.svg") 29.63162140360312% 81.92090395480228% no-repeat;
-}
-
-.Wind_Purple-dims {
-  width: 55.1px;
-  height: 57.1px;
-}
-
-.close_btn_default {
-  background: url("../assets/images/sprite.svg") 99.81373070782331% 33.3767926988266% no-repeat;
-}
-
-.close_btn_default-dims {
-  width: 51.2px;
-  height: 51.2px;
-}
-
-.close_btn_hover {
-  background: url("../assets/images/sprite.svg") 99.81373070782331% 16.6883963494133% no-repeat;
-}
-
-.close_btn_hover-dims {
-  width: 51.2px;
-  height: 51.2px;
-}
-
-.close_btn_hover_active {
-  background: url("../assets/images/sprite.svg") 99.81373070782331% 0 no-repeat;
-}
-
-.close_btn_hover_active-dims {
-  width: 51.2px;
-  height: 51.2px;
-}
-
-.down_btn {
-  background: url("../assets/images/sprite.svg") 0 0 no-repeat;
-  width: 94.4px;
-  height: 94.4px;
-}
-
-.down_btn_hover {
-  background: url("../assets/images/sprite.svg") 0 34.22770123277737% no-repeat;
-}
-
-.down_btn_hover-dims {
-  width: 82.2px;
-  height: 82.2px;
-}
-
-.down_btn_hover_active {
-  background: url("../assets/images/sprite.svg") 27.378190255220417% 0 no-repeat;
-}
-
-.down_btn_hover_active-dims {
-  width: 82.2px;
-  height: 82.2px;
-}
-
-.info_btn {
-  background: url("../assets/images/sprite.svg") 19.574348921870627% 61.298160360985776% no-repeat;
-  width: 69.9px;
-  height: 69.9px;
-}
-
-.info_btn_hover {
-  background: url("../assets/images/sprite.svg") 0 61.298160360985776% no-repeat;
-}
-
-.info_btn_hover-dims {
-  width: 69.9px;
-  height: 69.9px;
-}
-
-.info_btn_hover_active {
-  background: url("../assets/images/sprite.svg") 69.53234388126575% 25.859076709475875% no-repeat;
-}
-
-.info_btn_hover_active-dims {
-  width: 69.9px;
-  height: 69.9px;
-}
-
-.leftarrow_btn_default {
-  background: url("../assets/images/sprite.svg") 69.88460455952716% 0 no-repeat;
-}
-
-.leftarrow_btn_default-dims {
-  width: 71.7px;
-  height: 74.5px;
-}
-
-.leftarrow_btn_hover {
-  background: url("../assets/images/sprite.svg") 49.704475091472005% 26.278659611992946% no-repeat;
-}
-
-.leftarrow_btn_hover-dims {
-  width: 71.7px;
-  height: 74.5px;
-}
-
-.rightarrow_btn_default {
-  background: url("../assets/images/sprite.svg") 49.704475091472005% 0 no-repeat;
-}
-
-.rightarrow_btn_default-dims {
-  width: 71.7px;
-  height: 74.5px;
-}
-
-.rightarrow_btn_hover {
-  background: url("../assets/images/sprite.svg") 23.135378553335208% 33.29805996472663% no-repeat;
-}
-
-.rightarrow_btn_hover-dims {
-  width: 71.7px;
-  height: 74.5px;
-}
-
-
-
-//Funny size for 32px x 32px diamond - geometry!
-.diamond {
-  width: 22.6px;
-  height: 22.6px;
-  transform: rotate(45deg);
-  margin-left: 50px;
-  background: $straw;
-  display: inline-block;
-}
+//.diamond-icon {
+//  background-image: url(../assets/images/diamonds.svg);
+//  width: 31px; height: 33px;
+//}
+//
+//.diamond-inset {
+//  position: relative;
+//  &:after {
+//    content: '';
+//    background-image: url(../assets/images/diamonds.svg);
+//    width: 31px; height: 33px;
+//    display: block;
+//  }
+//  &.wind:after { background-position: 0px -32px; }
+//  &.coal:after { background-position: 31px -32px; }
+//  &.natural-gas:after { background-position: -93px -32px; }
+//  &.nuclear:after { background-position: -62px -32px; }
+//  &.solar:after { background-position: -31px -32px; }
+//
+//}
+//
+//.W-Light { background-position: 0px 0px; }
+//.C-Light { background-position: 31px 0px; }
+//.G-Light { background-position: -93px 0px; }
+//.N-Light { background-position: -62px 0px; }
+//.S-Light { background-position: -31px 0px; }
+//
+//.Coal_Beige {
+//  background: url("../assets/images/sprite.svg") 44.44743210540468% 81.92090395480228% no-repeat;
+//}
+//
+//.Coal_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Coal_Purple {
+//  background: url("../assets/images/sprite.svg") 14.81581070180156% 81.92090395480228% no-repeat;
+//}
+//
+//.Coal_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Facebook {
+//  background: url("../assets/images/sprite.svg") 14.385212965443342% 99.76996385146238% no-repeat;
+//}
+//
+//.Facebook-dims {
+//  width: 53.7px;
+//  height: 53.7px;
+//}
+//
+//.Gas_Beige {
+//  background: url("../assets/images/sprite.svg") 59.26324280720624% 81.92090395480228% no-repeat;
+//}
+//
+//.Gas_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Gas_Purple {
+//  background: url("../assets/images/sprite.svg") 0 81.92090395480228% no-repeat;
+//}
+//
+//.Gas_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.HandPointer_Active {
+//  background: url("../assets/images/sprite.svg") 28.71657754010695% 94.87500000000001% no-repeat;
+//}
+//
+//.HandPointer_Active-dims {
+//  width: 53px;
+//  height: 38px;
+//}
+//
+//.Linkedin {
+//  background: url("../assets/images/sprite.svg") 0 99.76996385146238% no-repeat;
+//}
+//
+//.Linkedin-dims {
+//  width: 53.7px;
+//  height: 53.7px;
+//}
+//
+//.NaturalGas_Beige {
+//  background: url("../assets/images/sprite.svg") 86.0446356547459% 0 no-repeat;
+//}
+//
+//.NaturalGas_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.NaturalGas_Purple {
+//  background: url("../assets/images/sprite.svg") 86.0446356547459% 18.97640412097042% no-repeat;
+//}
+//
+//.NaturalGas_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Nuclear_Beige {
+//  background: url("../assets/images/sprite.svg") 86.0446356547459% 37.95280824194084% no-repeat;
+//}
+//
+//.Nuclear_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Nuclear_Purple {
+//  background: url("../assets/images/sprite.svg") 37.59075020166712% 58.69059488202062% no-repeat;
+//}
+//
+//.Nuclear_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Solar_Beige {
+//  background: url("../assets/images/sprite.svg") 52.40656090346868% 58.69059488202062% no-repeat;
+//}
+//
+//.Solar_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Solar_Purple {
+//  background: url("../assets/images/sprite.svg") 67.22237160527024% 58.69059488202062% no-repeat;
+//}
+//
+//.Solar_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Twitter {
+//  background: url("../assets/images/sprite.svg") 85.72193945888026% 75.05750903713441% no-repeat;
+//}
+//
+//.Twitter-dims {
+//  width: 53.7px;
+//  height: 53.7px;
+//}
+//
+//.Wind_Beige {
+//  background: url("../assets/images/sprite.svg") 86.0446356547459% 56.92921236291127% no-repeat;
+//}
+//
+//.Wind_Beige-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.Wind_Purple {
+//  background: url("../assets/images/sprite.svg") 29.63162140360312% 81.92090395480228% no-repeat;
+//}
+//
+//.Wind_Purple-dims {
+//  width: 55.1px;
+//  height: 57.1px;
+//}
+//
+//.close_btn_default {
+//  background: url("../assets/images/sprite.svg") 99.81373070782331% 33.3767926988266% no-repeat;
+//}
+//
+//.close_btn_default-dims {
+//  width: 51.2px;
+//  height: 51.2px;
+//}
+//
+//.close_btn_hover {
+//  background: url("../assets/images/sprite.svg") 99.81373070782331% 16.6883963494133% no-repeat;
+//}
+//
+//.close_btn_hover-dims {
+//  width: 51.2px;
+//  height: 51.2px;
+//}
+//
+//.close_btn_hover_active {
+//  background: url("../assets/images/sprite.svg") 99.81373070782331% 0 no-repeat;
+//}
+//
+//.close_btn_hover_active-dims {
+//  width: 51.2px;
+//  height: 51.2px;
+//}
+//
+//.down_btn {
+//  background: url("../assets/images/sprite.svg") 0 0 no-repeat;
+//  width: 94.4px;
+//  height: 94.4px;
+//}
+//
+//.down_btn_hover {
+//  background: url("../assets/images/sprite.svg") 0 34.22770123277737% no-repeat;
+//}
+//
+//.down_btn_hover-dims {
+//  width: 82.2px;
+//  height: 82.2px;
+//}
+//
+//.down_btn_hover_active {
+//  background: url("../assets/images/sprite.svg") 27.378190255220417% 0 no-repeat;
+//}
+//
+//.down_btn_hover_active-dims {
+//  width: 82.2px;
+//  height: 82.2px;
+//}
+//
+//.info_btn {
+//  background: url("../assets/images/sprite.svg") 19.574348921870627% 61.298160360985776% no-repeat;
+//  width: 69.9px;
+//  height: 69.9px;
+//}
+//
+//.info_btn_hover {
+//  background: url("../assets/images/sprite.svg") 0 61.298160360985776% no-repeat;
+//}
+//
+//.info_btn_hover-dims {
+//  width: 69.9px;
+//  height: 69.9px;
+//}
+//
+//.info_btn_hover_active {
+//  background: url("../assets/images/sprite.svg") 69.53234388126575% 25.859076709475875% no-repeat;
+//}
+//
+//.info_btn_hover_active-dims {
+//  width: 69.9px;
+//  height: 69.9px;
+//}
+//
+//.leftarrow_btn_default {
+//  background: url("../assets/images/sprite.svg") 69.88460455952716% 0 no-repeat;
+//}
+//
+//.leftarrow_btn_default-dims {
+//  width: 71.7px;
+//  height: 74.5px;
+//}
+//
+//.leftarrow_btn_hover {
+//  background: url("../assets/images/sprite.svg") 49.704475091472005% 26.278659611992946% no-repeat;
+//}
+//
+//.leftarrow_btn_hover-dims {
+//  width: 71.7px;
+//  height: 74.5px;
+//}
+//
+//.rightarrow_btn_default {
+//  background: url("../assets/images/sprite.svg") 49.704475091472005% 0 no-repeat;
+//}
+//
+//.rightarrow_btn_default-dims {
+//  width: 71.7px;
+//  height: 74.5px;
+//}
+//
+//.rightarrow_btn_hover {
+//  background: url("../assets/images/sprite.svg") 23.135378553335208% 33.29805996472663% no-repeat;
+//}
+//
+//.rightarrow_btn_hover-dims {
+//  width: 71.7px;
+//  height: 74.5px;
+//}
+//
+//
+//
+////Funny size for 32px x 32px diamond - geometry!
+//.diamond {
+//  width: 22.6px;
+//  height: 22.6px;
+//  transform: rotate(45deg);
+//  margin-left: 50px;
+//  background: $straw;
+//  display: inline-block;
+//}
