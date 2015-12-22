@@ -12,7 +12,8 @@ angular.module('epaRfiApp')
       return stateManager.getSelectedState();
     }, function(newVal, oldVal) {
       if(newVal !== oldVal) {
-        init();
+        vm.selectedState = newVal;
+          init();
       }
     });
 
@@ -21,8 +22,7 @@ angular.module('epaRfiApp')
      * @return {Object}
     */
     function init() {
-      var state = stateManager.getSelectedState();
-      resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
+      resourceService.getAllResourcesForState(vm.selectedState, 2013, 'capita').then(function(response) {
         var maxUsage = _.max(response.data, function(resource) {
           return resource.usage;
         });

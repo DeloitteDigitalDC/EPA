@@ -1,3 +1,20 @@
+.invert .footer-pager {
+  color: $lavender;
+
+  &:before {
+    border-color: $lavender;
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+
+    &:before,
+    &:after {
+      border-color: $lavender;
+    }
+  }
+}
 .footer-pager {
   text-align: center;
   font-size: 18px;
@@ -5,9 +22,9 @@
   line-height: 100%;
   position: absolute;
   bottom: 0;
-  width: 315px;
+  width: 340px;
   left: 50%;
-  margin-left: -157px;
+  margin-left: -170px;
 
   &:before {
     content: '';
