@@ -1,0 +1,10 @@
+.statevstate {
+  .cssFade {
+    transition: opacity 500ms ease-out;
+    opacity: 1;
+
+    &.loading {
+      opacity: 0;
+    }
+  }
+}
