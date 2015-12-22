@@ -27,7 +27,10 @@ var eiaResourceApi = {};
 eiaResourceApi.getResource = function getResource(resource_name, state_name) {
   return getSpecificResourceData(RESOURCES[resource_name].id, state_name).then(function(body) {
     var obj = {};
-    obj[resource_name] = body;
+    obj.resource = resource_name;
+    obj.state = state_name;
+    obj.units = body[0].units;
+    obj.result = body[0].data;
     return obj;
   });
 };
@@ -46,7 +49,10 @@ eiaResourceApi.getResourceByYear = function getResourceByYear(resource_name, sta
   	});
   	body[0].data = yearResp;
     var obj = {};
-    obj[resource_name] = body;
+    obj.resource = resource_name;
+    obj.state = state_name;
+    obj.units = body[0].units;
+    obj.result = body[0].data;
   	return obj;
   });
 };
@@ -61,16 +67,16 @@ eiaResourceApi.getResourceByYearCapita = function getResourceByYearCapita(resour
 	var resourceData = eiaResourceApi.getResourceByYear(resource_name, state_name, year);
   var populationData = stateEIA.getPopulationData(state_name, year);
   return Promise.all([resourceData, populationData]).then(function(body) {
-    var resourceResult = body[0][resource_name][0];
+    var resourceResult = body[0].result;
     var populationResult = body[1][0];
     var units = resourceResult.units;
-    var resourceBtu = convertBillionBTUtoBTU(resourceResult.data[1]);
+    var resourceBtu = convertBillionBTUtoBTU(resourceResult[1]);
     var population = convertThousandsPeopletoPeople(populationResult.data[1]);
     var perCapita = parseInt(resourceBtu / population, 10); // round the result
     return {
-      'Resource': resource_name,
-      'UsagePerCapita': perCapita,
-      'Units': 'BTU per Capita'
+      'resource': resource_name,
+      'usage': perCapita,
+      'units': 'BTU per Capita'
     };
   });
 };

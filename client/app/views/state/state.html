@@ -6,25 +6,28 @@
     <div class="col-xs-6 text-right">
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
       <div class="hero-type">
-        To start, this is just a sample of<br /> six energy resources used in {{ IndividualCtrl.selectedState }}.
+        To start, this is just a sample of<br />six energy resource used in {{ StateCtrl.selectedState }}.
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-2 vertical-center">
-      <energy-legend ng-show="IndividualCtrl.showLegend"></energy-legend>
-      <detail-box ng-show="!IndividualCtrl.showLegend" energy-data="IndividualCtrl.selectedEnergyData"></detail-box>
+      <energy-legend ng-show="StateCtrl.showLegend"></energy-legend>
+      <detail-box ng-show="!StateCtrl.showLegend" energy-data="StateCtrl.selectedEnergyData"></detail-box>
     </div>
     <div class="col-xs-7">
-      <div dee-three="IndividualCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="IndividualCtrl.energyTypeClick" style="height: 480px;"></div>
+      <div dee-three="StateCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="StateCtrl.energyTypeClick" style="height: 480px;"></div>
     </div>
     <div class="col-xs-3 vertical-center">
-      <btu-badge class="invert" btu="200000000"></btu-badge>
+        <btu-badge class="invert" btu="200000000"></btu-badge>
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
       <footer-pager>
@@ -33,4 +36,3 @@
     </div>
   </div>
 </div>
-
