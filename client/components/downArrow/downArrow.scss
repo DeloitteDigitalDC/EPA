@@ -1,6 +1,11 @@
+.invert .downArrow {
+  background-image: url("../assets/images/downArrow_lilac.svg")
+}
 .downArrow {
   opacity: 0.8;
-  @extend .down_btn;
+  background: url("../assets/images/downArrow_straw.svg") 0 0 no-repeat;
+  width: 95px;
+  height: 95px;
 
   &:hover {
     opacity: 1;
