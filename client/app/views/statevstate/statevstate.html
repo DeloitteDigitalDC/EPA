@@ -1,4 +1,4 @@
-<div class="slide-body individual container-fluid">
+<div class="slide-body individual container-fluid statevstate">
   <div class="row">
     <div class="col-xs-6 text-left">
       <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
@@ -19,11 +19,12 @@
       <detail-box ng-show="!StatevstateCtrl.showLegend" energy-data="StatevstateCtrl.selectedEnergyData"></detail-box>
     </div>
     <div class="col-xs-7">
-<!--       <div dee-three="StatevstateCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="StatevstateCtrl.energyTypeClick" style="height: 480px;"></div> -->
-      <state-selector></state-selector>
+      <state-selector selected-state="StatevstateCtrl.selectedState"></state-selector>
+      <div class="cssFade" ng-class="{ 'loading' : StatevstateCtrl.loadingData }" dee-three="StatevstateCtrl.resourceData" dee-three-interface="StatevstateCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="StatevstateCtrl.energyTypeClick"></div>
+
     </div>
     <div class="col-xs-3 vertical-center">
-      <btu-badge class="invert" btu="200000000"></btu-badge>
+      <btu-badge class="invert" btu="StatevstateCtrl.btuTotal"></btu-badge>
     </div>
   </div>
 
