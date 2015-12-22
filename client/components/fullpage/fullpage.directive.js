@@ -25,7 +25,8 @@
         function buildFullPage() {
           $(element).fullpage(
             {
-              normalScrollElements: '.' + normalScrollClass
+              normalScrollElements: '.' + normalScrollClass,
+              fitToSectionDelay: 1000
             }
           );
         }
