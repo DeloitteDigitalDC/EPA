@@ -111,7 +111,6 @@
     }
 
     function getRadiusFromUsage(d) {
-      return 80;
       var btu = d.usage;
       if(btu < 100) {
         return 20;
