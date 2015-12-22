@@ -23,7 +23,7 @@ angular.module('epaRfiApp')
       var state = stateManager.getSelectedState();
       resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
         vm.resourceData = response.data;
-        console.log('IndividualCtrl resourceData', vm.resourceData);
+        //console.log('IndividualCtrl resourceData', vm.resourceData);
       });
     }
 

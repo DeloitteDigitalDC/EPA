@@ -39,7 +39,7 @@ angular.module('epaRfiApp')
 			resourceService.getAllResourcesForState(state).then(function(response) {
 				resourceApiResult = response; // cache the response
 				vm.resourceData = resourceService.getBtuForYear(response.data, vm.selectedTime.year); // filter for the year
-				console.log('Timeline init:', vm.resourceData);
+				//console.log('Timeline init:', vm.resourceData);
 			});
 		}
 
