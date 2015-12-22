@@ -100,7 +100,6 @@ h5 {
 
 // Component styles are injected through grunt
 // injector
-@import 'sprite.scss';
 @import 'views/individual/individual.scss';
 @import 'views/main/main.scss';
 @import 'views/nation/nation.scss';
@@ -114,6 +113,7 @@ h5 {
 @import '../components/footerPager/footerPager.scss';
 @import '../components/gradients/gradients.scss';
 @import '../components/legend/legend.scss';
+@import '../components/social-media/social-media.scss';
 @import '../components/state-drop-down/state-drop-down.scss';
 @import '../components/stateSelector/stateSelector.scss';
 @import '../components/timeline/timeline.scss';

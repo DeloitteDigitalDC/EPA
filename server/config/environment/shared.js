@@ -33,6 +33,22 @@ var configExport = {
       abbr: 'Ga',
       desc: 'A complex mixture of relatively volatile hydrocarbons with or without small quantities of additives, blended to form a fuel suitable for use in spark-ignition engines.'
     }
+  },
+  SOCIAL_MEDIA: {
+    url: 'http://epa-rfi-ecselastic-tu9y9j5je7k4-1565253159.us-east-1.elb.amazonaws.com/',
+    title: 'The Power of You',
+    description: 'The power of you description',
+    image: 'http://i.imgur.com/WACv9Cl.jpg',
+    TWITTER: {
+      'account': 'DeloitteDIGI_US',
+      'tweet': 'Check out this cool site'
+    },
+    LINKEDIN: {
+      'summary': 'Check out this on linkedin'
+    },
+    FACEBOOK: {
+      'APP_ID': 996945267036042
+    }
   }
 }
 
