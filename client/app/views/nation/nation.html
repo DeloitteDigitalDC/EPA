@@ -1,4 +1,4 @@
-<div class="slide-body nation container-fluid">
+<div class="slide-body container-fluid">
   <div class="row">
     <div class="col-xs-6 text-left">
       <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
@@ -18,11 +18,11 @@
       <energy-legend ng-show="NationCtrl.showLegend"></energy-legend>
       <detail-box ng-show="!NationCtrl.showLegend" energy-data="NationCtrl.selectedEnergyData"></detail-box>
     </div>
-    <div class="col-xs-7">
-      <div dee-three="NationCtrl.circleData" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="NationCtrl.energyTypeClick" style="height: 480px;"></div>
+    <div class="col-xs-7 us-map">
+      <div dee-three="NationCtrl.resourceData" dee-three-interface="NationCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="NationCtrl.energyTypeClick"></div>
     </div>
     <div class="col-xs-3 vertical-center">
-        <btu-badge class="invert" btu="200000000"></btu-badge>
+        <btu-badge class="invert" btu="NationCtrl.btuTotal"></btu-badge>
     </div>
   </div>
   <div class="row">
