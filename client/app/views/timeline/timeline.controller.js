@@ -10,14 +10,13 @@ angular.module('epaRfiApp')
 			'year': 1960 // default
 		};
 		vm.resourceData = {}; // where the data for d3 lies
-		var resourceData = null; // cache the result when a state is selected
+		var resourceApiResult = null; // cache the result when a state is selected
 
 		// when the state is selected, init()
 	  $scope.$watch(function() {
 	    return stateManager.getSelectedState();
 	  }, function(newVal, oldVal) {
 	  	if(newVal !== oldVal) {
-				console.log('newVal', newVal);
 				init();
 			}
 	  });
@@ -27,8 +26,8 @@ angular.module('epaRfiApp')
 			return vm.selectedTime;
 		}, function(newVal, oldVal) {
 			if(newVal !== oldVal) {
-				console.log('newVal', newVal);
-				filterData(resourceData);
+				vm.resourceData = resourceService.getBtuForYear(resourceApiResult.data, vm.selectedTime.year);
+				console.log('Timeline filtered:', vm.resourceData);
 			}
 		}, true);
 
@@ -38,38 +37,14 @@ angular.module('epaRfiApp')
 		function init() {
 			var state = stateManager.getSelectedState();
 			resourceService.getAllResourcesForState(state).then(function(response) {
-				resourceData = response;
-				filterData(response);
+				resourceApiResult = response; // cache the response
+				vm.resourceData = resourceService.getBtuForYear(response.data, vm.selectedTime.year); // filter for the year
+				console.log('Timeline init:', vm.resourceData);
 			});
 		}
 
 		/**
-		 * This function filters through the response object to feed into d3
-		 * @param  {Object} - response from the service
-		 * @return {Object} - vm.resourceData for d3
-		 */
-		function filterData(response) {
-			_.forEach(energyTypes, function(item) {
-				vm.resourceData[item.key] = getBtuForYear(_.find(response.data, {'resource': item.key}).result);
-			});
-			console.log('TimelineCtrl results', vm.resourceData);
-		}
-		
-		/**
-		 * This is a helper function to filter through the response data and find the data for the selected year
-		 * @param  {Object} - result from the API call
-		 * @return {Array} - Array representing the item with the matched year
-		 */
-		function getBtuForYear(result) {
-			var data = result[0].data;
-			var yearResp = _.find(data, function(yearInfo) {
-	  		return Number.parseInt(yearInfo[0]) === vm.selectedTime.year;
-	  	});
-	  	return yearResp;
-		}
-
-		/**
-		 * Generic Functions
+		 * Generic Functions for d3 visuals
 		 */
 		vm.showLegend = true;
 

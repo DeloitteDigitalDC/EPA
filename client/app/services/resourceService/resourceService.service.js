@@ -4,14 +4,15 @@
  * This is a service that interacts with the express API to retrieve resource data from the resource API.
  */
 angular.module('epaRfiApp')
-  .factory('resourceService', ['$http', '$q', function ($http, $q) {
+  .factory('resourceService', ['$http', '$q', 'appConfig', function ($http, $q, appConfig) {
 
     var resourceListData = null;
 
     var resourceService = {
       getResourceList: getResourceList,
       getResource: getResource,
-      getAllResourcesForState: getAllResourcesForState
+      getAllResourcesForState: getAllResourcesForState,
+      getBtuForYear: getBtuForYear
     };
 
     /**
@@ -65,6 +66,26 @@ angular.module('epaRfiApp')
       return $http.get("/api/resources/all", {'params': queryParams}).catch(function(error) {
         console.log('error', error);
       });
+    }
+    
+    /**
+     * This is a helper function to filter through the response data and return the data for the selected year
+     * @param  {Object} - Data result from an API call to the resources API
+     * @param  {Number} - Year
+     * @return {Array} - Array representing each resource item with info for the matched year
+     */
+    function getBtuForYear(data, year) {
+      var info = [];
+      _.forEach(data, function(item) {
+        var resourceInfo = {};
+        angular.extend(resourceInfo, item);
+        var yearResp = _.find(resourceInfo.result, function(yearInfo) {
+          return Number.parseInt(yearInfo[0]) === year;
+        });
+        resourceInfo.result = yearResp;
+        info.push(resourceInfo);
+      });
+      return info;
     }
 
     return resourceService;

@@ -5,6 +5,32 @@ angular.module('epaRfiApp')
 
 	var vm = this;
 
+	vm.resourceData = null; // data for d3
+
+	// watch for changes for the Selected State
+	$scope.$watch(function() {
+    return stateManager.getSelectedState();
+  }, function(newVal, oldVal) {
+    if(newVal !== oldVal) {
+      init();
+    }
+  });
+
+	/**
+	 * Initilizes the data for the StateCtrl
+	 * @return {Object}
+	 */
+  function init() {
+    var state = stateManager.getSelectedState();
+    resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
+      vm.resourceData = response.data;
+      console.log('StateCtrl resourceData', vm.resourceData);
+    });
+  }
+
+	/**
+	 * Generic Functions for d3
+	 */
 	vm.showLegend = true;
 
   vm.energyTypeClick = function(d) {
