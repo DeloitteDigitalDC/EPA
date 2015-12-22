@@ -32,7 +32,13 @@ angular.module('epaRfiApp')
      * @return {Object}
     */
     function init(selectedState) {
-      var state = selectedState.name || stateManager.getSelectedState();
+      var state;
+      if(selectedState) {
+        state = selectedState.name
+      } else {
+        state = stateManager.getSelectedState();
+      }
+
       resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
         vm.resourceData = response.data;
         vm.btuTotal = _.sum(response.data, function(resource) {
@@ -42,6 +48,14 @@ angular.module('epaRfiApp')
         vm.loadingData = false;
       });
     }
+
+    vm.showLegend = true;
+
+    vm.energyTypeClick = function(d) {
+      vm.showLegend = false;
+      vm.selectedEnergyData = d;
+      $scope.$apply();
+    };
 
 
   });

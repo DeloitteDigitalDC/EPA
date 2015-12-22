@@ -1,27 +1,43 @@
+.invert .footer-pager {
+  color: $lilac;
+
+  &:before {
+    border-color: $lilac;
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+
+    &:before,
+    &:after {
+      border-color: $lilac;
+    }
+  }
+}
 .footer-pager {
   text-align: center;
-  font-size: 18px;
-  margin-top: 142px;
+  font-size: 16px;
   line-height: 100%;
   position: absolute;
   bottom: 0;
-  width: 315px;
+  width: 440px;
   left: 50%;
-  margin-left: -157px;
+  margin-left: -220px;
 
   &:before {
     content: '';
     width: 100%;
     border-top: 2px solid $straw;
     display: block;
-    top: -26px;
+    top: -22px;
     position: absolute;
   }
 
   .downArrow {
     margin-top: -38px;
     opacity: 1;
-    transform: scale(0.7);
+    transform: scale(0.45);
   }
 
   hr {
@@ -37,6 +53,7 @@
       position: absolute;
       left: 0;
       top: 50%;
+      margin-top: -5px;
     }
 
     &:after {

@@ -15,7 +15,7 @@
   </div>
   <div class="row">
     <div class="col-xs-2 vertical-center">
-      <energy-legend ng-show="StatevstateCtrl.showLegend"></energy-legend>
+      <energy-legend class="invert" ng-show="StatevstateCtrl.showLegend"></energy-legend>
       <detail-box ng-show="!StatevstateCtrl.showLegend" energy-data="StatevstateCtrl.selectedEnergyData"></detail-box>
     </div>
     <div class="col-xs-7">
@@ -24,11 +24,11 @@
 
     </div>
     <div class="col-xs-3 vertical-center">
-      <btu-badge class="invert" btu="StatevstateCtrl.btuTotal"></btu-badge>
+      <btu-badge btu="StatevstateCtrl.btuTotal"></btu-badge>
     </div>
   </div>
 
-  <footer-pager>
+  <footer-pager class="invert">
     What about the whole nation’s usage?
   </footer-pager>
 </div>

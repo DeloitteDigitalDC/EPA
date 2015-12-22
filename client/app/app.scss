@@ -74,6 +74,15 @@ h5 {
   outline: 0;
 }
 
+.diamond {
+  width: 22.6px;
+  height: 22.6px;
+  transform: rotate(45deg);
+  margin-left: 50px;
+  background: $straw;
+  display: inline-block;
+}
+
 //To make BS cols the same height
 .row {
   display: flex;
