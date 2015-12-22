@@ -17,7 +17,7 @@ angular.module('epaRfiApp')
     });
 
     /**
-     * Initilizes the data for the IndividualCtrl
+     * Initilizes the data for the StatevstateCtrl
      * @return {Object}
     */
     function init() {
