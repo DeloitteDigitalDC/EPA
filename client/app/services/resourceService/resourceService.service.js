@@ -4,7 +4,7 @@
  * This is a service that interacts with the express API to retrieve resource data from the resource API.
  */
 angular.module('epaRfiApp')
-  .factory('resourceService', ['$http', '$q', 'appConfig', function ($http, $q, appConfig) {
+  .factory('resourceService', ['$http', '$q', function ($http, $q) {
 
     var resourceListData = null;
 
