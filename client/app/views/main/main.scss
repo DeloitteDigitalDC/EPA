@@ -16,9 +16,21 @@
   }
 }
 
-info-button {
+footer {
   position: fixed;
-  right: 40px;
-  bottom: 40px;
-  z-index: 100;
+  left: 0;
+  bottom: 0;
+  color: white;
+  background: $darkBlue;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 200;
+  transition: bottom 500ms ease-out;
+
+  &.hideFooter {
+    bottom: -25px;
+  }
 }
