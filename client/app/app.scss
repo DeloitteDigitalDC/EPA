@@ -84,6 +84,11 @@ h5 {
   align-items: center;
 }
 
+// fullpage.js override
+.fp-tableCell {
+    display: block;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'sprite.scss';
