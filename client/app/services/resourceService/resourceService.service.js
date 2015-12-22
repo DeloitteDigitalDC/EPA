@@ -46,7 +46,11 @@ angular.module('epaRfiApp')
         'year': year,
         'format': format
       };
-      return $http.get("/api/resources/" + resourceName, {'params': queryParams}).catch(function(error) {
+      var config = {
+        cache: true,
+        params: queryParams
+      };
+      return $http.get("/api/resources/" + resourceName, config).catch(function(error) {
         console.log('error', error);
       });
     }
@@ -63,11 +67,16 @@ angular.module('epaRfiApp')
         'year': year,
         'format': format
       };
-      return $http.get("/api/resources/all", {'params': queryParams}).catch(function(error) {
+      var config = {
+        cache: true,
+        params: queryParams
+      };
+
+      return $http.get("/api/resources/all", config).catch(function(error) {
         console.log('error', error);
       });
     }
-    
+
     /**
      * This is a helper function to filter through the response data and return the data for the selected year
      * @param  {Object} - Data result from an API call to the resources API
