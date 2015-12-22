@@ -41,6 +41,8 @@
     }
 
     function d3Init() {
+      d3Destroy();
+      
       var force = d3.layout.force()
       .nodes(scope.deeThree)
       .size([width, height])
