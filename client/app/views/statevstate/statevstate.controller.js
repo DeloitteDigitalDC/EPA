@@ -2,12 +2,13 @@
 
 angular.module('epaRfiApp')
   .controller('StatevstateCtrl', function ($scope, resourceService, stateManager) {
-    
+
     var vm = this;
 
-    vm.resourceData = null; // data for d3, it is set in the init()
+    vm.resourceData = []; // data for d3, it is set in the init()
+    vm.loadingData = false;
 
-    // watch for changes in the selected state
+    // watch for changes in the master/primary selected state
     $scope.$watch(function() {
       return stateManager.getSelectedState();
     }, function(newVal, oldVal) {
@@ -16,14 +17,29 @@ angular.module('epaRfiApp')
       }
     });
 
+    //watch for changes in this view's state
+    $scope.$watch(function() {
+      return vm.selectedState;
+    }, function(newVal, oldVal) {
+      if(newVal !== oldVal) {
+        vm.loadingData = true;
+        init(vm.selectedState);
+      }
+    });
+
     /**
      * Initilizes the data for the StatevstateCtrl
      * @return {Object}
     */
-    function init() {
-      var state = stateManager.getSelectedState();
+    function init(selectedState) {
+      var state = selectedState.name || stateManager.getSelectedState();
       resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
         vm.resourceData = response.data;
+        vm.btuTotal = _.sum(response.data, function(resource) {
+          return resource.usage;
+        });
+        vm.d3api.refresh();
+        vm.loadingData = false;
       });
     }
 

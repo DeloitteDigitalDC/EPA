@@ -25,7 +25,10 @@
         function buildFullPage() {
           $(element).fullpage(
             {
-              normalScrollElements: '.' + normalScrollClass
+              normalScrollElements: '.' + normalScrollClass,
+              afterRender: function(){
+                $rootScope.$broadcast('fullpageReady');
+              }
             }
           );
         }
