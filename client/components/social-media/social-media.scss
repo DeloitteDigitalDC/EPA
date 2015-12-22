@@ -1,0 +1,42 @@
+.social-media {
+	.social-buttons {
+		margin-left: -35px;
+	}
+
+	.diamond {
+		width: 30px;
+		height: 30px;
+		margin-left: 35px;
+	}
+
+	[class*="so-"]:before {
+	  font-family: 'brandico', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -o-transform: scale(1);
+	  text-rendering: optimizeLegibility;
+	  font-size: 15pt;
+	  color: $darkBlue;
+	}
+
+	.so-facebook, .so-twitter-bird, .so-linkedin  {
+	  transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		-webkit-transform:rotate(-45deg);
+		margin-top: 6px;
+    margin-left: 3px;
+    cursor: pointer;
+	}
+
+	.so-facebook:before{content:"\f300"}.so-facebook-rect:before{content:"\f301"}
+	.so-twitter:before{content:"\f302"}.so-twitter-bird:before{content:"\f303"}
+	.so-linkedin:before{content:"\f31a"}.so-linkedin-rect:before{content:"\f31b"}
+
+	// plugin button style overrides
+	.linkedinButton, .facebookButton {
+		display: none;
+	}
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+}
+
