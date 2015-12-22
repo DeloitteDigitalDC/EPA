@@ -5,6 +5,7 @@ angular.module('epaRfiApp')
   	var vm = this;
 
     vm.resourceData = []; // data for d3, it is set in the init()
+    vm.btuTotal = 0;
 
     // watch for changes in the selected state
     $scope.$watch(function() {
@@ -22,7 +23,11 @@ angular.module('epaRfiApp')
     function init() {
       var state = stateManager.getSelectedState();
       resourceService.getAllResourcesForState(state, 2013, 'capita').then(function(response) {
-        vm.resourceData = response.data;
+        var maxUsage = _.max(response.data, function(resource) {
+          return resource.usage;
+        });
+        vm.resourceData = [maxUsage];
+        vm.btuTotal = maxUsage.usage;
         vm.d3api.refresh();
       });
     }
