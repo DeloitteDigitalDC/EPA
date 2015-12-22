@@ -17,6 +17,7 @@ $straw-85: rgba($straw, 0.85);
 $straw-50: rgba($straw, 0.50);
 $straw-25: rgba($straw, 0.25);
 $straw-5: rgba($straw, 0.05);
+$darkBlue: #2F2C5E;
 
 /**
  * App-wide Styles
@@ -100,7 +101,6 @@ h5 {
 
 // Component styles are injected through grunt
 // injector
-@import 'sprite.scss';
 @import 'views/individual/individual.scss';
 @import 'views/main/main.scss';
 @import 'views/nation/nation.scss';

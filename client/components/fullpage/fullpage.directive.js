@@ -28,6 +28,9 @@
               normalScrollElements: '.' + normalScrollClass,
               afterRender: function(){
                 $rootScope.$broadcast('fullpageReady');
+              },
+              onLeave: function (index, nextIndex, direction) {
+                $rootScope.$broadcast('slideChanged', { 'nextIndex': nextIndex, 'direction': direction } );
               }
             }
           );
