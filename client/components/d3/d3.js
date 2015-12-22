@@ -94,7 +94,7 @@
       svg.selectAll("g").append('text')
       .attr('text-anchor', 'middle')
       .text(function (d) {
-        return d.type.abbr;
+        return d.energyType.abbr;
       })
       .attr("font-family", "Raleway")
       .attr("font-size", "14px")
