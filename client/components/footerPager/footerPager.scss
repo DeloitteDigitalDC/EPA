@@ -3,7 +3,11 @@
   font-size: 18px;
   margin-top: 142px;
   line-height: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 315px;
+  left: 50%;
+  margin-left: -157px;
 
   &:before {
     content: '';
