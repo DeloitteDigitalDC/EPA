@@ -1,2 +1,35 @@
-<h1>Nation</h1>
-<div>This is the nation view.</div>
+<div class="slide-body container-fluid">
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
+    </div>
+    <div class="col-xs-6 text-right">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="hero-type">
+       In 2013, each person in the US used <br/> <strong>{{ NationCtrl.btuTotal | number }} </strong> BTUs of these resources.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 vertical-center">
+      <energy-legend ng-show="NationCtrl.showLegend"></energy-legend>
+      <detail-box ng-show="!NationCtrl.showLegend" energy-data="NationCtrl.selectedEnergyData"></detail-box>
+    </div>
+    <div class="col-xs-7 us-map">
+      <div dee-three="NationCtrl.resourceData" dee-three-interface="NationCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="NationCtrl.energyTypeClick"></div>
+    </div>
+    <div class="col-xs-3 vertical-center">
+        <btu-badge class="invert" btu="NationCtrl.btuTotal"></btu-badge>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <footer-pager>
+        Take Action
+      </footer-pager>
+    </div>
+  </div>
+</div>
