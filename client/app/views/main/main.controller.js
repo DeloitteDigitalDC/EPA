@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('epaRfiApp')
-.controller('MainCtrl', function ($scope, stateManager) {
+.controller('MainCtrl', function ($scope, stateManager, $rootScope) {
   var vm = this;
-  vm.hideViews = true;
+  vm.hideFooter = true;
 
   $scope.$watch(function () {
     return stateManager.getSelectedState();
@@ -13,6 +13,12 @@ angular.module('epaRfiApp')
       vm.fullpageInterface.rebuildFullpage();
     }
   });
+
+  //Hide footer on first page only based on slide index
+  $rootScope.$on('slideChanged', function(event, args) {
+    vm.hideFooter = (args.nextIndex === 1 && args.direction === 'up');
+    $scope.$apply();
+  })
 
 });
 
