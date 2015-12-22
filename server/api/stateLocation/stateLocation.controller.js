@@ -62,8 +62,7 @@ function getSortedStateArray(selectedStateId) {
     stateObj.distance = calculateDistance(stateObj.lat, stateObj.long, selectedState.lat, selectedState.long)
   });
 
-  //Drop the first item since that's the original selection
-  return _.drop(_.sortBy(stateArrayWithDistance, 'distance'), 1);
+  return _.sortBy(stateArrayWithDistance, 'distance');
 }
 
 /**
