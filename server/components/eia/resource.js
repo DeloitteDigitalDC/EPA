@@ -16,6 +16,7 @@ var apiKey = config.eia.apiKey;
 var categoryEndpoint = config.eia.categoryEndpoint + apiKey;
 var resourceEndpoint = config.eia.categoryEndpoint + apiKey + '&category_id=40203&category_id=40204&category_id=40236';
 var RESOURCES = config.resources;
+var ENERGY_TYPES = config.ENERGY_TYPES;
 
 var eiaResourceApi = {};
 
@@ -28,6 +29,7 @@ eiaResourceApi.getResource = function getResource(resource_name, state_name) {
   return getSpecificResourceData(RESOURCES[resource_name].id, state_name).then(function(body) {
     var obj = {};
     obj.resource = resource_name;
+    obj.energyType = ENERGY_TYPES[RESOURCES[resource_name].key || resource_name.toUpperCase()];
     obj.state = state_name;
     obj.units = body[0].units;
     obj.result = body[0].data;
@@ -50,6 +52,7 @@ eiaResourceApi.getResourceByYear = function getResourceByYear(resource_name, sta
   	body[0].data = yearResp;
     var obj = {};
     obj.resource = resource_name;
+    obj.energyType = ENERGY_TYPES[RESOURCES[resource_name].key || resource_name.toUpperCase()];
     obj.state = state_name;
     obj.units = body[0].units;
     obj.result = body[0].data;
@@ -75,6 +78,7 @@ eiaResourceApi.getResourceByYearCapita = function getResourceByYearCapita(resour
     var perCapita = parseInt(resourceBtu / population, 10); // round the result
     return {
       'resource': resource_name,
+      'energyType': ENERGY_TYPES[RESOURCES[resource_name].key || resource_name.toUpperCase()],
       'usage': perCapita,
       'units': 'BTU per Capita'
     };

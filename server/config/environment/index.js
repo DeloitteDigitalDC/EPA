@@ -61,10 +61,12 @@ var all = {
       'id': 40932
     },
     'naturalgas': {
-      'id': 40951
+      'id': 40951,
+      'key': 'NATURAL_GAS'
     },
     'gasoline': {
-      'id': 40946
+      'id': 40946,
+      'key': 'MOTOR_GASOLINE'
     }
   }
 };
