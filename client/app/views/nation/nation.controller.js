@@ -14,7 +14,6 @@ angular.module('epaRfiApp')
 	  function init() {
 	    resourceService.getAllResourcesForState('United States', 2013).then(function(response) {
 	      vm.resourceData = response.data;
-	      //console.log('NationCtrl resourceData', vm.resourceData);
 	    });
 	  }
 
