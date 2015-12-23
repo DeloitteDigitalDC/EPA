@@ -49,6 +49,10 @@ var configExport = {
     FACEBOOK: {
       'APP_ID': 996945267036042
     }
+  },
+  FOOTER_LINKS: {
+    'DeloitteDigital': 'http://www.deloittedigital.com/',
+    'EPA': 'http://www3.epa.gov/'
   }
 }
 
