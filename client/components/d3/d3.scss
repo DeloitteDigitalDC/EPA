@@ -7,6 +7,8 @@ div[dee-three] {
 }
 
 svg.d3 {
+  overflow: visible;
+
   circle {
     cursor: pointer;
   }
