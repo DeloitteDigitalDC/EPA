@@ -45,6 +45,11 @@ footer {
   font-weight: 200;
   transition: bottom 500ms ease-out;
 
+  a, a:focus, a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
   &.hideFooter {
     bottom: -25px;
   }

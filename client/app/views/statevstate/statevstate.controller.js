@@ -49,10 +49,7 @@ angular.module('epaRfiApp')
       });
     }
 
-    vm.showLegend = true;
-
     vm.energyTypeClick = function(d) {
-      vm.showLegend = false;
       vm.selectedEnergyData = d;
       $scope.$apply();
     };

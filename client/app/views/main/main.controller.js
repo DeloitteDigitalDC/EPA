@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('epaRfiApp')
-.controller('MainCtrl', function ($scope, stateManager, $rootScope) {
+.controller('MainCtrl', function ($scope, $rootScope, stateManager, appConfig) {
   var vm = this;
   vm.hideFooter = true;
   vm.hideViews = true;
+  vm.footerLinks = appConfig.FOOTER_LINKS;
 
   $scope.$watch(function () {
     return stateManager.getSelectedState();
