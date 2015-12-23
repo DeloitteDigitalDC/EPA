@@ -52,7 +52,8 @@ var configExport = {
   },
   FOOTER_LINKS: {
     'DeloitteDigital': 'http://www.deloittedigital.com/',
-    'EPA': 'http://www3.epa.gov/'
+    'EPA': 'http://www3.epa.gov/',
+    'EIA': 'http://www.eia.gov/'
   }
 }
 
