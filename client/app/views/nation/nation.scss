@@ -1,5 +1,10 @@
-.us-map {
-  background-image: url(../assets/images/USmap.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+.nation {
+    .us-map {
+    background-image: url(../assets/images/USmap.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  detail-box {
+    bottom: 145px;
+  }
 }
