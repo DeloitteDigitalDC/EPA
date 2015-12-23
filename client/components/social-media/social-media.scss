@@ -1,0 +1,77 @@
+.social-media {
+	text-align: center;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  height: 80px;
+  padding-top: 8px;
+  margin-left: -220px;
+  margin-top: 15px;
+  border-top: 1px solid $straw;
+  border-left: 1px solid $straw;
+  border-right: 1px solid $straw;
+
+  hr {
+  	margin: 0;
+  	border: 0;
+    height: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      border-top: 2px solid $straw;
+      width: 18%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: -2px;
+    }
+
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+
+	.social-buttons {
+		margin-left: -25px;
+		margin-top: 19px;
+	}
+
+	.diamond {
+		width: 30px;
+		height: 30px;
+		margin-left: 25px;
+	}
+
+	[class*="so-"]:before {
+	  font-family: 'brandico', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -o-transform: scale(1);
+	  text-rendering: optimizeLegibility;
+	  font-size: 15pt;
+	  color: $darkBlue;
+	}
+
+	.so-facebook, .so-twitter-bird, .so-linkedin  {
+	  transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		-webkit-transform:rotate(-45deg);
+    cursor: pointer;
+	}
+
+	.so-facebook:before{content:"\f300"}.so-facebook-rect:before{content:"\f301"}
+	.so-twitter:before{content:"\f302"}.so-twitter-bird:before{content:"\f303"}
+	.so-linkedin:before{content:"\f31a"}.so-linkedin-rect:before{content:"\f31b"}
+
+	// plugin button style overrides
+	.linkedinButton, .facebookButton {
+		display: none;
+	}
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+}
+

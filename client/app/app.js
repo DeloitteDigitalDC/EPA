@@ -7,12 +7,16 @@ angular.module('epaRfiApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ui.select'
+  'ui.select',
+  'djds4rce.angular-socialshare'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
+  })
+  .run(function($FB, appConfig) {
+    $FB.init(appConfig.SOCIAL_MEDIA.FACEBOOK.APP_ID);
   });
 
