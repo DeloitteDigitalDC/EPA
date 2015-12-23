@@ -1,9 +1,24 @@
 #mainSection {
   .slide-body {
-    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    width: 1280px;
+    min-height: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+
+
+    btu-badge {
+      position: absolute;
+      top: 350px;
+      right: 135px;
+    }
+
+    detail-box {
+      bottom: 125px;
+    }
   }
 
   .fadeTransition {

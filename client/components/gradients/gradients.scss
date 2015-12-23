@@ -30,15 +30,3 @@ $atmos: #dec8ba;
   background: $ozone;
   background: linear-gradient(to bottom, $ozone 0%, $atmos 100%);
 }
-
-.gradient-bg-extend {
-    &:before {
-    content: '';
-    position: absolute;
-    width: 4096px;
-    left: -2048px;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-  }
-}

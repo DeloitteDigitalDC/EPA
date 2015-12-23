@@ -40,13 +40,6 @@ body {
   color: $straw;
 }
 
-#mainSection {
-    width: 1280px;
-  height: 800px;
-  margin: 0 auto;
-  display: block;
-}
-
 p {
   font-size: 1.33em;
   font-weight: 200;
@@ -79,8 +72,8 @@ h5 {
 }
 
 .logo {
-  margin: 20px;
-}
+    margin: 40px 0 0 40px;
+  }
 
 .hero-type {
   font-weight: 200;
@@ -89,6 +82,8 @@ h5 {
   border-left: 3px solid $straw;
   padding-left: 25px;
   line-height: 100%;
+  margin-top: 60px;
+    margin-left: 150px;
 }
 .sunny-day-gradient .hero-type {
   color: $lavender;
