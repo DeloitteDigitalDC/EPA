@@ -10,9 +10,9 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   font-style: normal;
   font-weight: normal;
   src: url('../assets/fonts/brandico.eot');
-  src: url('../assets/fonts/brandico/brandico.eot?#iefix') format('eot'), 
-  url('../assets/fonts/brandico.woff') format('woff'), 
-  url('../assets/fonts/brandico.ttf') format('truetype'), 
+  src: url('../assets/fonts/brandico/brandico.eot?#iefix') format('eot'),
+  url('../assets/fonts/brandico.woff') format('woff'),
+  url('../assets/fonts/brandico.ttf') format('truetype'),
   url('../assets/fonts/brandico.svg#brandico') format('svg');
 }
 
@@ -20,6 +20,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   Colors
 */
 $lavender: rgb(124, 94, 117);
+$violet: rgb(47, 44, 94);
 $lilac: rgb(165, 143, 159);
 $rust: rgb(229, 173, 147);
 $lightBlue: #3f6b94;
@@ -37,6 +38,13 @@ $darkBlue: #2F2C5E;
 body {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   color: $straw;
+}
+
+#mainSection {
+    width: 1280px;
+  height: 800px;
+  margin: 0 auto;
+  display: block;
 }
 
 p {
@@ -81,6 +89,10 @@ h5 {
   border-left: 3px solid $straw;
   padding-left: 25px;
   line-height: 100%;
+}
+.sunny-day-gradient .hero-type {
+  color: $lavender;
+  border-color: $lavender;
 }
 
 .btn-unstyled {
