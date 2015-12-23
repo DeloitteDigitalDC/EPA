@@ -1,34 +1,32 @@
-#mainSection {
-  .slide-body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 1280px;
-    min-height: 800px;
-    height: 100%;
-    margin: 0 auto;
-    display: block;
+.slide-body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 1280px;
+  min-height: 800px;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
 
 
-    btu-badge {
-      position: absolute;
-      top: 350px;
-      right: 135px;
-    }
-
-    detail-box {
-      bottom: 125px;
-    }
+  btu-badge {
+    position: absolute;
+    top: 350px;
+    right: 135px;
   }
 
-  .fadeTransition {
-    transition: opacity 1500ms ease-out;
-    opacity: 1;
+  detail-box {
+    bottom: 125px;
   }
+}
 
-  .fadeIn {
-    opacity: 0 !important;
-  }
+.fadeTransition {
+  transition: opacity 1500ms ease-out;
+  opacity: 1;
+}
+
+.fadeIn {
+  opacity: 0 !important;
 }
 
 footer {

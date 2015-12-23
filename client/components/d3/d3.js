@@ -42,7 +42,7 @@
 
     function d3Init() {
       d3Destroy();
-      
+
       var force = d3.layout.force()
       .nodes(scope.deeThree)
       .size([width, height])
@@ -66,6 +66,7 @@
       .data(scope.deeThree)
       .enter()
       .append("g")
+      .style("display", function(d) { return d.usage === 0 ? "none" : null; })  //Hide zero usage
       .on("click", function (d) {
         scope.deeThreeEnergyClickCallback(d);
       });
@@ -114,27 +115,36 @@
 
     function getRadiusFromUsage(d) {
       var btu = d.usage;
-      if(btu < 100) {   //Hundred
-        return 20;
-      } else
-      if(btu < 1000) {   //Thousand
-        return 25;
-      } else
-      if(btu < 10000) {  //Ten Thousand
-        return 30;
-      } else
+      // if(btu < 100) {   //Hundred
+      //   return 18;
+      // } else
+      // if(btu < 1000) {   //Thousand
+      //   return 20;
+      // } else
+      // if(btu < 10000) {  //Ten Thousand
+      //   return 22;
+      // } else
+      if(btu < 50000) {  //Fifty Thousand
+        return 18;
+      }
       if(btu < 100000) {  //Hundred Thousand
-        return 35;
+        return 24;
       } else
       if(btu < 500000) {  //Five Hundred Thousand
-        return 40;
+        return 28;
       } else
-      if(btu < 1000000) { //One Million
-        return 45;
+      if(btu < 5000000) { //5 Million
+        return 34;
       } else
       if(btu < 10000000) { //Ten Million
-        return 50;
+        return 40;
       } else
+      if(btu < 25000000) { //25 Million
+        return 44;
+      } else
+      if(btu < 50000000) { //50 Million
+        return 48;
+      }else
       if(btu < 100000000) { //Hundred Million
         return 55;
       } else

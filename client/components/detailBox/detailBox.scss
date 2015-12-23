@@ -13,16 +13,24 @@ detail-box {
     font-weight: 300;
   }
 
-  img {
+  svg {
     position: absolute;
     width: 228px;
     height: 150px;
     left: -275px;
     bottom: -95px;
     opacity: 0.5;
+    stroke: #333;
   }
 }
 
 .sunny-day-gradient detail-box {
   color: $violet;
+}
+
+.dark-blue-gradient detail-box,
+.pink-purple-gradient detail-box {
+    svg {
+    stroke: $straw;
+  }
 }

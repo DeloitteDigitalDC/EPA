@@ -1,16 +1,16 @@
 .social-media {
-	text-align: center;
+  text-align: center;
+  border-top: 1px solid $straw;
+
+  bottom: 60px;
   font-size: 16px;
-  position: absolute;
-  left: 50%;
-  width: 300px;
   height: 80px;
-  padding-top: 8px;
+  left: 50%;
   margin-left: -220px;
   margin-top: 15px;
-  border-top: 1px solid $straw;
-  border-left: 1px solid $straw;
-  border-right: 1px solid $straw;
+  padding-top: 8px;
+  position: absolute;
+  width: 440px;
 
   hr {
   	margin: 0;
