@@ -24,6 +24,7 @@ angular.module('epaRfiApp')
       if(newVal !== oldVal) {
         vm.loadingData = true;
         init(vm.selectedState);
+        vm.selectedEnergyData = null; //Clear previously selected entry
       }
     });
 
