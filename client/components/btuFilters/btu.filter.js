@@ -21,7 +21,6 @@
 
   angular.module('epaRfiApp').filter('btuAmount', function () {
     return function (input) {
-      console.log("filter", input);
       if(input === 0) {
         return 0;
       }
