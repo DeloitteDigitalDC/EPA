@@ -71,10 +71,6 @@ h5 {
   font-size: 1em;
 }
 
-.logo {
-    margin: 40px 0 0 40px;
-  }
-
 .hero-type {
   font-weight: 200;
   font-size: 42px;
@@ -136,6 +132,7 @@ h5 {
 @import '../components/footerPager/footerPager.scss';
 @import '../components/gradients/gradients.scss';
 @import '../components/legend/legend.scss';
+@import '../components/logo/logo.scss';
 @import '../components/social-media/social-media.scss';
 @import '../components/state-drop-down/state-drop-down.scss';
 @import '../components/stateSelector/stateSelector.scss';
