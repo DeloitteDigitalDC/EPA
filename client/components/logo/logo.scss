@@ -1,0 +1,10 @@
+.logo {
+  width: 145px;
+  height: 52px;
+  background: url(../assets/images/logo_straw.svg) 0 0 no-repeat;
+  margin: 40px 0 0 40px;
+  display: inline-block;
+}
+.sunny-day-gradient .logo {
+  background-image: url(../assets/images/logo_lavender.svg);
+}
