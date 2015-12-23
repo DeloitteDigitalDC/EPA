@@ -8,6 +8,9 @@
       },
       templateUrl: 'components/detailBox/detailBox.html',
       link    : function (scope, element) {
+        scope.$watch('energyData', function(newVal) {
+          scope.svgPath = '../assets/images/' + newVal.energyType.abbr + '.svg';
+        });
 
       }
     };

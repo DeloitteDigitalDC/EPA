@@ -1,5 +1,5 @@
 <div class="detail-box">
-  <img ng-show="energyData.energyType.abbr" ng-src="{{'../assets/images/' + energyData.energyType.abbr + '.svg'}}">
+  <div ng-include="svgPath"></div>
   <p><b>
     {{ energyData.energyType.name }}
   </b></p>
