@@ -137,13 +137,6 @@ var stateData = [
     "long"   : "-75.526755"
   },
   {
-    "state"  : "DC",
-    "name"   : "District of Columbia",
-    "capital": "Washington",
-    "lat"    : "38.904722",
-    "long"   : "-77.016389"
-  },
-  {
     "state"  : "FL",
     "name"   : "Florida",
     "capital": "Tallahassee",

@@ -11,7 +11,6 @@ var common = require('./common.js');
 var config = require('../../config/environment');
 
 var apiKey = config.eia.apiKey;
-console.log("apikey", apiKey);
 var populationEndpoint = config.eia.categoryEndpoint + apiKey + '&category_id=40367';
 
 var eiaStatesApi = {};
