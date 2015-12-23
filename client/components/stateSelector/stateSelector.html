@@ -1,5 +1,6 @@
 <div class="state-selector">
+      <p class="text-center">Select a State</p>
       <button class="btn-unstyled" ng-disabled="selectedStateIndex === 0" ng-click="prevState()"> &lt; </button>
-      <h4 class="selectedState text-center"> {{ selectedState.name}} </h4>
+      <div class="selectedState text-center"> {{ selectedState.name}} </div>
       <button class="btn-unstyled" ng-click="nextState()"> &gt; </button>
 </div>
