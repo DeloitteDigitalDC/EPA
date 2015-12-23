@@ -46,6 +46,12 @@ resourceApi.index = function index(req, res) {
   var year = validateYear(yearQuery);
   var format = validateFormat(formatQuery);
 
+  if(resourceParam === 'total' && state && year && format) {
+    return Resource.getTotalResourceByYearCapita(state, year)
+      .then(responseWithResult(res))
+      .catch(handleError(res));
+  }
+
   // api/resources/all?state=Alabama&year=2013&format=capita
   if(resourceParam === 'all' && state && year && format) {
     return Resource.getAllResourcesByYearCapita(state, year)

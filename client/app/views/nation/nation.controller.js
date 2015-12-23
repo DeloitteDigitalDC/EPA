@@ -15,10 +15,10 @@ angular.module('epaRfiApp')
 	  function init() {
 	    resourceService.getAllResourcesForState('United States', 2013, 'capita').then(function(response) {
 	      vm.resourceData = response.data;
-	      vm.btuTotal = _.sum(response.data, function(resource) {
-	        return resource.usage;
-	      });
 	      vm.d3api.refresh();
+	    });
+	    resourceService.getTotalResourcesForState('United States', 2013, 'capita').then(function(response) {
+	    	vm.btuTotal = response.data.usage;
 	    });
 	  }
 

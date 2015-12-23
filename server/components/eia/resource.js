@@ -46,9 +46,7 @@ eiaResourceApi.getResource = function getResource(resource_name, state_name) {
 eiaResourceApi.getResourceByYear = function getResourceByYear(resource_name, state_name, year) {
   return getSpecificResourceData(RESOURCES[resource_name].id, state_name).then(function(body) {
   	var yearData = body[0].data;
-  	var yearResp = _.find(yearData, function(yearInfo) {
-  		return Number.parseInt(yearInfo[0]) === year;
-  	});
+  	var yearResp = findYearinData(yearData, year);
   	body[0].data = yearResp;
     var obj = {};
     obj.resource = resource_name;
@@ -72,13 +70,33 @@ eiaResourceApi.getResourceByYearCapita = function getResourceByYearCapita(resour
   return Promise.all([resourceData, populationData]).then(function(body) {
     var resourceResult = body[0].result;
     var populationResult = body[1][0];
-    var units = resourceResult.units;
-    var resourceBtu = convertBillionBTUtoBTU(resourceResult[1]);
-    var population = convertThousandsPeopletoPeople(populationResult.data[1]);
-    var perCapita = parseInt(resourceBtu / population, 10); // round the result
+    var perCapita = calculateBtuPerCapita(resourceResult[1], populationResult.data[1]);
     return {
       'resource': resource_name,
       'energyType': ENERGY_TYPES[RESOURCES[resource_name].key || resource_name.toUpperCase()],
+      'usage': perCapita,
+      'units': 'BTU per Capita'
+    };
+  });
+};
+
+/**
+ * This function returns information of Total BTU per capita for ALL Energy Resources in the EIA API
+ * @param  {String} - State
+ * @param  {Number} - Year
+ * @return {Object} - Object with BTU per capita for Total Energy Consumption for the given parameters
+ */
+eiaResourceApi.getTotalResourceByYearCapita = function getTotalResource(state_name, year) {
+  var totalData = getTotalResourceData(state_name);
+  var populationData = stateEIA.getPopulationData(state_name, year);
+  return Promise.all([totalData, populationData]).then(function(body) {
+    var totalResult = body[0][0];
+    var yearResp = findYearinData(totalResult.data, year);
+    var totalBtu = yearResp[1];
+    var population = body[1][0].data[1];
+    var perCapita = calculateBtuPerCapita(totalBtu, population);
+    return {
+      'resource': 'Total',
       'usage': perCapita,
       'units': 'BTU per Capita'
     };
@@ -149,6 +167,32 @@ function convertThousandsPeopletoPeople(TPeople) {
   return TPeople * 1000;
 }
 
+/**
+ * This ia a helper function to help calculate the BTU per capita given the params
+ * @param  {Number} - BTU in Billion BTU
+ * @param  {Number} - Population in Thousands
+ * @return {Number} - Number result from the BTU per capita calculation
+ */
+function calculateBtuPerCapita(btuResult, populationResult) {
+  var resourceBtu = convertBillionBTUtoBTU(btuResult);
+  var population = convertThousandsPeopletoPeople(populationResult);
+  var perCapita = parseInt(resourceBtu / population, 10); // round the result
+  return perCapita;
+}
+
+/**
+ * This is a helper function to parse through data and find the information for the given year
+ * @param  {Object} - Data from the EIA API
+ * @param  {Number} - Year
+ * @return {Object} - The data object that matches the given year
+ */
+function findYearinData(data, year) {
+  var result = _.find(data, function(yearInfo) {
+    return Number.parseInt(yearInfo[0]) === year;
+  });
+  return result;
+}
+
 /////////// Generic Functions to get btu and series information for a specific state
 
 /**
@@ -163,6 +207,20 @@ function getSpecificResourceData(resource_id, state_name) {
 	var data = parsed.category.childcategories;
 	var btu_id = _.find(data, {'name': 'Btu'}).category_id;
 	return getBtuData(btu_id, state_name);
+  });
+}
+
+/**
+ * This function gets the total energy consumption for the specified state
+ * @param  {String} - State
+ * @return {Object} - Data about Total BTU usage for all resources in the EIA API
+ */
+function getTotalResourceData(state_name) {
+  return rp(resourceEndpoint).then(function (body) {
+    var parsed = JSON.parse(body);
+    var states = parsed.category.childseries;
+    var state = common.findState(states, state_name);
+    return common.getSeries(state.series_id);
   });
 }
 
