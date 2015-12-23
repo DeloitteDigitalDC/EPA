@@ -1,12 +1,13 @@
 energy-legend {
   width: 175px;
-  display: block;
-  margin: 0 auto;
+  margin-top: 75px;
+  margin-left: 150px;
+  display: inline-block;
 
   ul {
     width: 175px;
     position: relative;
-    left: 75px;
+    left: 50px;
 
     &:after {
       content: '';
@@ -39,8 +40,9 @@ energy-legend {
       line-height: 36px;
     }
   }
+}
 
-  &.invert {
+  .sunny-day-gradient energy-legend {
     color: $lavender;
     ul {
       &:after {
@@ -53,4 +55,3 @@ energy-legend {
       }
     }
   }
-}

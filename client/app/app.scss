@@ -10,9 +10,9 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   font-style: normal;
   font-weight: normal;
   src: url('../assets/fonts/brandico.eot');
-  src: url('../assets/fonts/brandico/brandico.eot?#iefix') format('eot'), 
-  url('../assets/fonts/brandico.woff') format('woff'), 
-  url('../assets/fonts/brandico.ttf') format('truetype'), 
+  src: url('../assets/fonts/brandico/brandico.eot?#iefix') format('eot'),
+  url('../assets/fonts/brandico.woff') format('woff'),
+  url('../assets/fonts/brandico.ttf') format('truetype'),
   url('../assets/fonts/brandico.svg#brandico') format('svg');
 }
 
@@ -20,6 +20,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   Colors
 */
 $lavender: rgb(124, 94, 117);
+$violet: rgb(47, 44, 94);
 $lilac: rgb(165, 143, 159);
 $rust: rgb(229, 173, 147);
 $lightBlue: #3f6b94;
@@ -70,10 +71,6 @@ h5 {
   font-size: 1em;
 }
 
-.logo {
-  margin: 20px;
-}
-
 .hero-type {
   font-weight: 200;
   font-size: 42px;
@@ -81,6 +78,12 @@ h5 {
   border-left: 3px solid $straw;
   padding-left: 25px;
   line-height: 100%;
+  margin-top: 60px;
+    margin-left: 150px;
+}
+.sunny-day-gradient .hero-type {
+  color: $lavender;
+  border-color: $lavender;
 }
 
 .btn-unstyled {
@@ -129,6 +132,7 @@ h5 {
 @import '../components/footerPager/footerPager.scss';
 @import '../components/gradients/gradients.scss';
 @import '../components/legend/legend.scss';
+@import '../components/logo/logo.scss';
 @import '../components/social-media/social-media.scss';
 @import '../components/state-drop-down/state-drop-down.scss';
 @import '../components/stateSelector/stateSelector.scss';

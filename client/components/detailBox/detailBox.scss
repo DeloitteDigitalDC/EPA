@@ -1,18 +1,28 @@
 detail-box {
-  width: 175px;
-  margin: 0 auto;
-  background: $straw-5;
-
-  .title {
-    background: $straw-5;
-    text-transform: uppercase;
-    padding: 5px;
-    font-size: 16px;
-  }
+  width: 440px;
+  position: absolute;
+  left: 50%;
+  margin-left: -220px;
 
   p {
     font-size: 14px;
     line-height: 105%;
     padding: 7px;
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-weight: 300;
   }
+
+  img {
+    position: absolute;
+    width: 228px;
+    height: 150px;
+    left: -275px;
+    bottom: -95px;
+    opacity: 0.5;
+  }
+}
+
+.sunny-day-gradient detail-box {
+  color: $violet;
 }

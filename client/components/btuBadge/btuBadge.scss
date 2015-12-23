@@ -1,6 +1,5 @@
 .btuBadge {
   display: block;
-  margin: 0 auto;
   width: 222px;
   height: 222px;
   background: url(../../assets/images/btu_badge_lilac.svg) 0 0 no-repeat;
@@ -32,6 +31,20 @@
     text-transform: uppercase;
     margin-top: 10px;
   }
+
+  p {
+    position: absolute;
+    color: $lavender;
+    text-align: center;
+    width: 100%;
+
+    &.pre {
+      top: -32px;
+    }
+    &.post {
+      bottom: -40px;
+    }
+  }
 }
 
 .invert {
@@ -44,7 +57,8 @@
     color: $lavender;
   }
 
-  .btuLocation {
+  .btuLocation,
+  p {
     color: $straw;
   }
 }

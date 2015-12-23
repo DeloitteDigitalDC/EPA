@@ -5,7 +5,9 @@
       restrict: 'E',
       templateUrl: 'components/btuBadge/btuBadge.html',
       scope: {
-        btu: "="
+        btu: "=",
+        preText: "@pre",
+        postText: "@post"
       },
       link    : function (scope, element) {
 

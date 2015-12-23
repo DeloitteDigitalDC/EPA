@@ -20,13 +20,13 @@
     &:before,
     &:after {
       content: '';
-      border-top: 2px solid $straw;
+      border-top: 1px solid $straw;
       width: 18%;
       display: block;
       position: absolute;
       left: 0;
       top: 100%;
-      margin-top: -2px;
+      margin-top: -1px;
     }
 
     &:after {

@@ -34,10 +34,7 @@ angular.module('epaRfiApp')
 	/**
 	 * Generic Functions for d3
 	 */
-	vm.showLegend = true;
-
   vm.energyTypeClick = function(d) {
-    vm.showLegend = false;
     vm.selectedEnergyData = d;
     $scope.$apply();
   };

@@ -1,32 +1,26 @@
-<div class="slide-body container-fluid statevstate">
-  <div class="row">
-    <div class="col-xs-6 text-left">
-      <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
-    </div>
-    <div class="col-xs-6 text-right">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="hero-type">
-        How much energy does each state population use?
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-2 vertical-center">
-      <energy-legend class="invert" ng-show="StatevstateCtrl.showLegend"></energy-legend>
-      <detail-box ng-show="!StatevstateCtrl.showLegend" energy-data="StatevstateCtrl.selectedEnergyData"></detail-box>
-    </div>
-    <div class="col-xs-7">
-      <state-selector selected-state="StatevstateCtrl.selectedState"></state-selector>
-      <div class="cssFade" ng-class="{ 'loading' : StatevstateCtrl.loadingData }" dee-three="StatevstateCtrl.resourceData" dee-three-interface="StatevstateCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="StatevstateCtrl.energyTypeClick"></div>
+<div class="slide-body statevstate">
+  <logo></logo>
 
-    </div>
-    <div class="col-xs-3 vertical-center">
-      <btu-badge btu="StatevstateCtrl.btuTotal"></btu-badge>
-    </div>
+  <div class="hero-type">
+    How much energy does <br/>each state population use?
   </div>
+
+  <energy-legend
+  ></energy-legend>
+
+  <div class="cssFade" ng-class="{ 'loading' : StatevstateCtrl.loadingData }"
+    dee-three="StatevstateCtrl.resourceData"
+    dee-three-interface="StatevstateCtrl.d3api"
+    dee-three-outer-circle-offset="5"
+    dee-three-energy-click-callback="StatevstateCtrl.energyTypeClick"
+  ></div>
+
+  <btu-badge class="invert"
+    btu="StatevstateCtrl.btuTotal"
+    pre="{{ StatevstateCtrl.selectedState.name }} uses"
+  ></btu-badge>
+
+  <state-selector selected-state="StatevstateCtrl.selectedState"></state-selector>
 
   <footer-pager class="invert">
     What about the whole nation’s usage?

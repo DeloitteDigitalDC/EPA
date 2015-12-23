@@ -1,34 +1,33 @@
-<div class="slide-body container-fluid">
-  <div class="row">
-    <div class="col-xs-6 text-left">
-      <img src="../assets/images/logo.svg" alt="The Power of You" class="logo" />
-    </div>
-    <div class="col-xs-6 text-right">
-    </div>
+<div class="slide-body state">
+  <logo></logo>
+
+  <div class="hero-type">
+    Here’s a sample of <br />six energy resources used in {{ StateCtrl.selectedState }}.
   </div>
 
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="hero-type">
-        Now here’s a sample of <br />six energy resources used in {{ StateCtrl.selectedState }}.
-      </div>
-    </div>
-  </div>
+  <energy-legend
+  ></energy-legend>
 
-  <div class="row">
-    <div class="col-xs-2 vertical-center">
-      <energy-legend ng-show="StateCtrl.showLegend"></energy-legend>
-      <detail-box ng-show="!StateCtrl.showLegend" energy-data="StateCtrl.selectedEnergyData"></detail-box>
-    </div>
-    <div class="col-xs-7">
-      <div dee-three="StateCtrl.resourceData" dee-three-interface="StateCtrl.d3api" dee-three-outer-circle-offset="5" dee-three-energy-click-callback="StateCtrl.energyTypeClick"></div>
-    </div>
-    <div class="col-xs-3 vertical-center">
-        <btu-badge class="invert" btu="StateCtrl.btuTotal"></btu-badge>
-    </div>
-  </div>
+  <div
+    dee-three="StateCtrl.resourceData"
+    dee-three-interface="StateCtrl.d3api"
+    dee-three-outer-circle-offset="5"
+    dee-three-energy-click-callback="StateCtrl.energyTypeClick"
+  ></div>
+
+  <btu-badge
+    btu="StateCtrl.btuTotal"
+    pre="A person uses"
+    class="invert"
+    post="in {{ StateCtrl.selectedState }}."
+  ></btu-badge>
+
+  <detail-box
+    energy-data="StateCtrl.selectedEnergyData"
+  ></detail-box>
 
   <footer-pager>
     What about your entire state, and others, in a year?
   </footer-pager>
+
 </div>

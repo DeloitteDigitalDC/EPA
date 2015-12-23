@@ -27,6 +27,8 @@ angular.module('epaRfiApp')
           return resource.usage;
         });
         vm.resourceData = [maxUsage];
+        vm.selectedEnergyType = maxUsage.energyType.name;
+
         vm.btuTotal = maxUsage.usage;
         vm.d3api.refresh();
       });
@@ -35,9 +37,7 @@ angular.module('epaRfiApp')
     /**
      * Generic Functions for d3
     */
-    vm.showLegend = true;
     vm.energyTypeClick = function(d) {
-      vm.showLegend = false;
       vm.selectedEnergyData = d;
       $scope.$apply();
     };
