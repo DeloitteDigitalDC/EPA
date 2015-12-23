@@ -1,7 +1,7 @@
-<div class="detail-box">
+<div class="detail-box" ng-show="energyData">
   <div ng-include="svgPath"></div>
   <p><b>
-    {{ energyData.energyType.name }}
+    {{ energyData.usage | btuAmount }} {{ energyData.usage | btuMagnitude }} BTU per person of {{ energyData.energyType.name }}
   </b></p>
   <p>{{ energyData.energyType.desc }}</p>
 </div>
