@@ -8,5 +8,5 @@
   <div class="fadeTransition section gradient-bg-extend dark-blue-gradient" ui-view="nation" ng-show="!MainCtrl.hideViews" ng-class="{ 'fadeIn': MainCtrl.hideViews}"></div>
 </section>
 <footer ng-class="{ 'hideFooter' : MainCtrl.hideFooter }">
-  This site is powered by <a href="{{MainCtrl.footerLinks.DeloitteDigital}}" target="_blank"><b>Deloitte Digital</b></a>, In partnership with the <a href="{{MainCtrl.footerLinks.EPA}}" target="_blank"><b>U.S. EPA</b></a>, Special thanks to <a href="{{MainCtrl.footerLinks.EIA}}" target="_blank"><b>U.S. EIA</b></a> in sharing their data to help inform this site.
+  This site is powered by <a ng-href="{{MainCtrl.footerLinks.DeloitteDigital}}" target="_blank"><b>Deloitte Digital</b></a>, In partnership with the <a ng-href="{{MainCtrl.footerLinks.EPA}}" target="_blank"><b>U.S. EPA</b></a>, Special thanks to <a ng-href="{{MainCtrl.footerLinks.EIA}}" target="_blank"><b>U.S. EIA</b></a> in sharing their data to help inform this site.
 </footer>
