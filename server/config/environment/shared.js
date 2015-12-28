@@ -35,16 +35,16 @@ var configExport = {
     }
   },
   SOCIAL_MEDIA: {
-    url: 'http://epa-rfi-ecselastic-tu9y9j5je7k4-1565253159.us-east-1.elb.amazonaws.com/',
-    title: 'The Power of You',
-    description: 'The power of you description',
+    url: 'http://powerofbtu.com/',
+    title: 'The Power of BTU',
+    description: 'Clean design, API usage of enviro data, and to the point experience. Nicely done by Deloitte Digital Federal Studio!',
     image: 'http://www.deloittedigital.com/assets/img/common/footer-map-us-desktop-2x.jpg',
     TWITTER: {
       'account': 'DeloitteDIGI_US',
-      'tweet': 'Check out this cool site'
+      'tweet': 'Huh. A well-designed site on energy usage. Take a look at "The Power of BTU"'
     },
     LINKEDIN: {
-      'summary': 'Check out this on linkedin'
+      'summary': 'Clean design, API usage of enviro data, and to the point experience. Nicely done by Deloitte Digital Federal Studio!'
     },
     FACEBOOK: {
       'APP_ID': 996945267036042
