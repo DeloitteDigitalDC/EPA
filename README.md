@@ -1,6 +1,4 @@
-# The Power of BTU
-
-This project is best viewed using the Chrome Browser at **1280 x 800**. [The Power of BTU](http://powerofbtu.com/).
+# [The Power of BTU](http://powerofbtu.com/)
 
 ## The Deloitte Digital Approach
 
@@ -11,7 +9,7 @@ Taking a project from concept to completion requires a flexible approach enablin
 
 We’re all about the user. Discovery is about quickly learning as much as we can about the available data, users, their problems, expectations, and pain points. We utilized human-centered design tools and techniques, which include **ethnographic research**, **rapid prototyping**, and **personas**.
 
-We also conducted our **sprint planning** and set up our backlog of user stories and prioritization in Jira. During this sprint, our team added and prioritized new user stories based on user feedback and usability testing. 
+We also conducted our **sprint planning** and set up our backlog of user stories and prioritization in Jira. During this sprint, our team added and prioritized new user stories based on user feedback and usability testing.
 
 
 ### 2. Design
@@ -27,7 +25,7 @@ Our team created the app scaffolding using the Angular Fullstack Yeoman Generato
 
 ### 4. Deploy
 
-We deploy using an automated process with containerized deployments, maximizing our deployment speed while reducing the risk of environment inconsistencies. Our CI server, CircleCI, monitors the GitHub repository for changes made to the production branch, and after passing unit tests, builds the application in a Docker container, ships it to the Hub, then deploys it via AWS Elastic Container Service (ECS). We’re able to handle all kinds of cloud and collocated infrastructures, but prefer the flexibility and consistency of ECS and Cloud Formation.
+We deploy using an automated process with containerized deployments, maximizing our deployment speed while reducing the risk of environment inconsistencies. Our CI server, CircleCI, monitors the GitHub repository for changes made to the production branch, and after passing unit tests, builds the application in a Docker container, ships it to the Hub, then deploys it via AWS Elastic Container Service (ECS). We’re able to handle all kinds of cloud and collocated infrastructures, but prefer the flexibility and consistency of ECS and CloudFormation.
 
 ## Previous Experience with Agencies of the U.S. Federal Government
 
