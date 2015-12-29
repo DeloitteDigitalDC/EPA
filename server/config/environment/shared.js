@@ -38,7 +38,7 @@ var configExport = {
     url: 'http://powerofbtu.com/',
     title: 'The Power of BTU',
     description: 'Clean design, API usage of enviro data, and to the point experience. Nicely done by Deloitte Digital Federal Studio!',
-    image: 'http://www.deloittedigital.com/assets/img/common/footer-map-us-desktop-2x.jpg',
+    image: 'http://powerofbtu.com/assets/images/social_media.png',
     TWITTER: {
       'account': 'DeloitteDIGI_US',
       'tweet': 'Huh. A well-designed site on energy usage. Take a look at "The Power of BTU"'
