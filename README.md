@@ -1,29 +1,34 @@
-# epa
+# The Power of BTU
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.1.1.
+This project is best viewed using the Chrome Browser at **1280 x 800**. [The Power of BTU](http://powerofbtu.com/).
 
-## Getting Started
+## The Deloitte Digital Approach
 
-### Prerequisites
+At Deloitte Digital, we have a core belief that great design doesn’t just happen. Ideas alone are common. It takes discipline, research, and talented and creative minds to make insights into something tangible that we can build, test, and iterate on. In this section, we will describe our approach towards building the prototype for the EPA Environmental Digital Services RFI.
+Taking a project from concept to completion requires a flexible approach enabling ongoing evaluation. We developed our prototype using the **Studio Agile Model** where small, highly-coordinated, cross-functional teams release working builds during sprint cycles organized into four phases: (1) Discovery, (2) Design, (3) Develop, and (4) Deploy.
 
-- [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
-- [Bower](bower.io) (`npm install --global bower`)
-- [Ruby](https://www.ruby-lang.org) and then `gem install sass`
-- [Grunt](http://gruntjs.com/) (`npm install --global grunt-cli`)
+### 1. Discovery
 
-### Developing
+We’re all about the user. Discovery is about quickly learning as much as we can about the available data, users, their problems, expectations, and pain points. We utilized human-centered design tools and techniques, which include **ethnographic research**, **rapid prototyping**, and **personas**.
 
-1. Run `npm install` to install server dependencies.
+We also conducted our **sprint planning** and set up our backlog of user stories and prioritization in Jira. During this sprint, our team added and prioritized new user stories based on user feedback and usability testing. 
 
-2. Run `bower install` to install front-end dependencies.
 
-3. Run `grunt serve` to start the development server. It should automatically open the client in your browser when ready.
+### 2. Design
 
-## Build & development
+After reviewing the publicly available environmental APIs, our team members sketched out initial concepts for discussion and iteration. The **wireframes** were created in Omnigraffle and moved into concept validation.
 
-Run `grunt build` for building and `grunt serve` for preview.
+After visual compositions were created, a high fidelity **prototype** was created using InVision. Our interaction designer conducted **usability testing**, resulting in feedback used to update designs and prioritize features. This allowed us to identify usability issues early on, resulting in significant time savings further on in the development process.
 
-## Testing
 
-Running `npm test` will run the unit tests with karma.
+### 3. Develop
+
+Our team created the app scaffolding using the Angular Fullstack Yeoman Generator and set up our environments with Amazon Web Services (AWS) CloudFormation. Our pipeline was designed to maximize the speed with which we can deploy a feature, while adhering to QA and configuration management processes critical to building a quality product.
+
+### 4. Deploy
+
+We deploy using an automated process with containerized deployments, maximizing our deployment speed while reducing the risk of environment inconsistencies. Our CI server, CircleCI, monitors the GitHub repository for changes made to the production branch, and after passing unit tests, builds the application in a Docker container, ships it to the Hub, then deploys it via AWS Elastic Container Service (ECS). We’re able to handle all kinds of cloud and collocated infrastructures, but prefer the flexibility and consistency of ECS and Cloud Formation.
+
+## Previous Experience with Agencies of the U.S. Federal Government
+
+With our capabilities, agencies can bring us their biggest challenges, assured we can bring a new vision to life with digital. We’ve reimagined and implemented an enhanced website experience and modernized web content management platform for the US Navy. We’ve designed and deployed a self-service portal and complimentary applications suite—driving enhanced operations with greater efficiencies for the Federal Government. We’re currently unifying a dispirit workforce through a cross-platform mobile news experience that consolidates and amplifies agency communications.
