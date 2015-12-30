@@ -17,8 +17,8 @@ angular.module('epaRfiApp')
         return scope.selectedState.selected;
       }, function (newVal) {
         if (newVal) {
-          scope.selectedStateCallback(newVal.name);
-          stateManager.setSelectedState(newVal.name);
+          scope.selectedStateCallback(newVal);
+          stateManager.setSelectedState(newVal);
         }
       });
     }

@@ -15,7 +15,7 @@
           return stateManager.getSelectedState();
         }, function(newVal) {
           if(newVal) {
-            stateManager.getNearbyStates(scope.selectedState).then(function(stateList) {
+            stateManager.getNearbyStates(newVal.name).then(function(stateList) {
               scope.stateList = stateList;
               scope.selectedState = scope.stateList[scope.selectedStateIndex];
             });

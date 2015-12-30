@@ -2,7 +2,7 @@
   <logo></logo>
 
   <div class="hero-type">
-    To start, this is just a sample of<br />one energy resource used in {{ IndividualCtrl.selectedState }}.
+    To start, this is just a sample of<br />one energy resource used in {{ IndividualCtrl.selectedState.displayName }}.
   </div>
 
   <energy-legend
@@ -18,7 +18,7 @@
   <btu-badge
     btu="IndividualCtrl.btuTotal"
     pre="A person uses"
-    post="of {{ IndividualCtrl.selectedEnergyType}} in {{ IndividualCtrl.selectedState }}"
+    post="of {{ IndividualCtrl.selectedEnergyType}} in {{ IndividualCtrl.selectedState.displayName }}"
   ></btu-badge>
 
   <detail-box

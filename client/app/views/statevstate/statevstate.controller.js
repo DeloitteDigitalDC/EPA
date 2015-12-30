@@ -35,7 +35,7 @@ angular.module('epaRfiApp')
     function init(selectedState) {
       var state;
       if(selectedState) {
-        state = selectedState.name
+        state = selectedState.name;
       } else {
         state = stateManager.getSelectedState();
       }

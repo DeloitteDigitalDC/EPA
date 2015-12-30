@@ -6,8 +6,6 @@
 angular.module('epaRfiApp')
   .factory('resourceService', ['$http', '$q', function ($http, $q) {
 
-    var resourceListData = null;
-
     var resourceService = {
       getResourceList: getResourceList,
       getResource: getResource,
@@ -21,17 +19,23 @@ angular.module('epaRfiApp')
      * @return {Object} - List of Resources in the API
      */
     function getResourceList() {
-      if(resourceListData) {
-        return $q.when(resourceListData);
-      } else {
-        var resourcePromise = $http.get("/api/resources");
-        return resourcePromise.then(function(data) {
-          resourceListData = data;
-          return data;
-        }).catch(function(error) {
-          console.log('error', error);
+      var config = {
+        cache: true
+      };
+      var resourcePromise = $http.get('/api/resources', config);
+      return resourcePromise.then(function(data) {
+        var resourceListData = data.data.States;
+        _.forEach(resourceListData, function(item) {
+          item.displayName = item.name;
         });
-      }
+        var result = _.find(resourceListData, function(item) {
+          return item.name === 'District of Columbia';
+        });
+        result.displayName = 'Washington, DC';
+        return _.sortByOrder(resourceListData, ['displayName']);
+      }).catch(function(error) {
+        console.log('error', error);
+      });
     }
 
     /**

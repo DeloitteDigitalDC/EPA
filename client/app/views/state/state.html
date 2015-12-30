@@ -2,7 +2,7 @@
   <logo></logo>
 
   <div class="hero-type">
-    Here’s a sample of <br />six energy resources used in {{ StateCtrl.selectedState }}.
+    Here’s a sample of <br />six energy resources used in {{ StateCtrl.selectedState.displayName }}.
   </div>
 
   <energy-legend
@@ -19,7 +19,7 @@
     btu="StateCtrl.btuTotal"
     pre="A person uses"
     class="invert"
-    post="in {{ StateCtrl.selectedState }}."
+    post="in {{ StateCtrl.selectedState.displayName }}."
   ></btu-badge>
 
   <detail-box

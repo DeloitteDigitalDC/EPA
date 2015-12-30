@@ -17,7 +17,7 @@
 
   <btu-badge class="invert"
     btu="StatevstateCtrl.btuTotal"
-    pre="{{ StatevstateCtrl.selectedState.name }} uses"
+    pre="{{ StatevstateCtrl.selectedState.displayName || StatevstateCtrl.selectedState.name }} uses"
   ></btu-badge>
 
   <state-selector selected-state="StatevstateCtrl.selectedState"></state-selector>
