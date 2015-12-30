@@ -5,6 +5,8 @@
 At Deloitte Digital, we have a core belief that great design doesn’t just happen. Ideas alone are common. It takes discipline, research, and talented and creative minds to make insights into something tangible that we can build, test, and iterate on. In this section, we will describe our approach towards building the prototype for the EPA Environmental Digital Services RFI.
 Taking a project from concept to completion requires a flexible approach enabling ongoing evaluation. We developed our prototype using the **Studio Agile Model** where small, highly-coordinated, cross-functional teams release working builds during sprint cycles organized into four phases: (1) Discovery, (2) Design, (3) Develop, and (4) Deploy.
 
+In a short time span of 7 business days we were able to ideate, design, and deploy the first iteration of this product. The initial release was engineered to be viewed on desktops with 1280x800 resolution. As indicated in our wireframes and visual compositions, future iterations will feature a responsive design for optimized experience on all devices.
+
 ### 1. Discovery
 
 We’re all about the user. Discovery is about quickly learning as much as we can about the available data, users, their problems, expectations, and pain points. We utilized human-centered design tools and techniques, which include **ethnographic research**, **rapid prototyping**, and **personas**.
