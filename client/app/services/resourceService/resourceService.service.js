@@ -19,7 +19,10 @@ angular.module('epaRfiApp')
      * @return {Object} - List of Resources in the API
      */
     function getResourceList() {
-      var resourcePromise = $http.get("/api/resources");
+      var config = {
+        cache: true
+      };
+      var resourcePromise = $http.get('/api/resources', config);
       return resourcePromise.then(function(data) {
         var resourceListData = data.data.States;
         _.forEach(resourceListData, function(item) {
