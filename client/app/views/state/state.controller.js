@@ -22,7 +22,7 @@ angular.module('epaRfiApp')
 	 * @return {Object}
 	 */
   function init() {
-    resourceService.getAllResourcesForState(vm.selectedState, 2013, 'capita').then(function(response) {
+    resourceService.getAllResourcesForState(vm.selectedState.name, 2013, 'capita').then(function(response) {
       vm.resourceData = response.data;
       vm.btuTotal = _.sum(response.data, function(resource) {
         return resource.usage;

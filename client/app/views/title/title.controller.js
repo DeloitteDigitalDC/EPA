@@ -8,8 +8,8 @@ angular.module('epaRfiApp')
   vm.disableDownButton = true;
 
   resourceService.getResourceList().then(function(result) {
-    vm.stateArray = _.reject(result.data.States, function(item) {
-      return (item.name === 'United States') || (item.name === 'District of Columbia');
+    vm.stateArray = _.reject(result, function(item) {
+      return (item.name === 'United States');
     });
   });
 

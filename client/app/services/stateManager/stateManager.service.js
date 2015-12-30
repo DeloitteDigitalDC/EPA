@@ -17,7 +17,7 @@ angular.module('epaRfiApp')
 
     stateManager.getNearbyStates = function() {
       var deferred = $q.defer();
-      $http.get('/api/stateLocation/abbr/' + stateInfo).then(function(resp) {
+      $http.get('/api/stateLocation/abbr/' + stateInfo.name).then(function(resp) {
         $http.get('/api/stateLocation/' + resp.data).then(function(resp) {
           deferred.resolve(resp.data);
         });

@@ -130,6 +130,14 @@ var stateData = [
     "long"   : "-72.677"
   },
   {
+    "state"  : "DC",
+    "name"   : "District of Columbia",
+    "displayName": "Washington, DC",
+    "capital": "Washington",
+    "lat"    : "38.904722",
+    "long"   : "-77.016389"
+  },
+  {
     "state"  : "DE",
     "name"   : "Delaware",
     "capital": "Dover",
